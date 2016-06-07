@@ -1,0 +1,2115 @@
+body{
+	background: url(../img/548550_tekstura_staroy_bumagi_thumb.jpg) ;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}	
+#main{
+	width:100%; 
+	height:20px; 
+	margin:0 auto; 
+	background-color: #965D44;
+	text-align:center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #f8f6da;
+    font-size: 20px;
+}
+
+#contract_wrap > button {
+    background-color: #e4b16b;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #c78f41;
+}
+#date{
+	 height: 100px;
+    margin: -24px 0 0 700px;
+    position: absolute;
+    
+}
+#health{
+	 /*margin: -24px 0 0 800px;*/
+	 width: 170px;
+	 height:6px;
+	 background-color:#C71400;
+}
+.health_wrap{
+	background-color: #e4b97c;
+    height: 6px;
+    margin: -23px 0 0 1130px;
+    padding: 5px;
+    position: absolute;
+    width: 170px;
+}
+.contracts{
+	float: left;
+    margin: 0 0 15px 140px;
+    position: absolute;
+}
+.map_all{
+	background: url(../img/game_map.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+}
+#reno{
+	margin: 342px 0 0 127px;
+	position:absolute;
+}
+
+#virginia{
+	 margin: 228px 0 0 385px;
+	position:absolute;
+	}
+#carson{
+	margin: 248px 0 0 638px;
+    position:absolute;
+}
+#redwood{
+	margin: 420px 0 0 420px;
+	position: absolute;
+}
+#silver_springs{
+	margin: 147px 0 0 927px;
+	position: absolute;
+}
+#westwood{
+	margin: 100px 0 0 198px;
+	position: absolute;
+}
+#doyle{
+	margin: 71px 0 0 640px;
+	position: absolute;
+}
+#bridgeport{
+	margin: 375px 0 0 810px;
+	position: absolute;
+}
+.main_wrap{
+	width:1321px;
+	height:auto;
+}
+.wrp_main{
+	width: 1000px;
+	height:auto;
+}
+.wrn{
+	width: 600px;
+	height: 300px;
+	background-color: #bbb;
+	position: absolute;
+	margin: 60px 0 0 300px;
+}
+.str{
+	background-color: #e4b16b;
+    border: 1px solid #443c38;
+    border-radius: 10px;
+    box-shadow: 1px 2px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin: 47px 0 0 170px;
+    padding: 20px;
+    position: absolute;
+    width: 750px;
+}
+.str_btn{
+	width: 300px;
+	padding: 10px;
+	margin: 0 0 0 27%;
+	cursor:pointer;
+	background-color: #fcffd3;
+	border-radius: 10px;
+	color: #2c282c;
+	font-size: 20px;
+	font-weight: bold;
+}
+.ci_marks{
+	width:50px;	
+	height:50px;
+	background:rgba(255, 21, 0, 0.0);
+	cursor:pointer;
+	border-radius: 50px;
+}
+.ci_marks:hover{
+	width:50px;	
+	height:50px;
+	background:rgba(255, 21, 0, 0.5);
+	cursor:pointer;
+	border-radius: 50px;
+}
+.reno_map{
+	background: url(../img/citys/reno.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.virginia_map{
+	background: url(../img/citys/virginia.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.carson_map{
+	background: url(../img/citys/carson.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.redwood_map{
+	background: url(../img/citys/redwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.silver_springs_map{
+	background: url(../img/citys/Silver_Spring.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.westwood_map{
+	background: url(../img/citys/Westwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.doyle_map{
+	background: url(../img/citys/Doyle.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.bridgeport_map{
+	background: url(../img/citys/Bridgeport.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	
+}
+.back_block{
+	background-color: #e4b16b;
+    border: 1px solid #484c5c;
+    border-radius: 10px;
+    color: #2c282c;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 380px;
+    margin-top: 490px;
+    padding-top: 10px;
+    position: absolute;
+    text-align: center;
+    width: 400px;
+}
+.banner_city {
+    font-size: 30px;
+}
+.back{
+	display:none;
+	
+}
+.none{
+
+	display:none;
+	position: absolute;
+}
+.block{
+
+	display:block;
+}
+.ok{
+	width:650px;
+	height:auto;
+	background-color: #e4b16b;
+	position: absolute;
+	margin: 50px 0 0 270px;
+	border: 1px solid #443C38;
+	border-radius:10px;
+	box-shadow: 1px 2px 22px;
+	font-weight:bold;
+}
+.btn{
+	width: 200px;
+	padding: 10px;
+	margin: 15px 0 10px 280px;
+	cursor: pointer;
+	background-color: #fcffd3;
+	 border-radius: 10px;
+	 color: #2c282c;
+	 font-size: 20px;
+	 font-weight: bold;
+}
+.btn_m{
+	 background-color: #fcffd3;
+    border-radius: 10px;
+    color: #2c282c;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5% 0 10px 15px;
+    padding: 10px;
+    width: 300px;
+}
+.btn_m1{
+	background-color: #fcffd3;
+    border-radius: 10px;
+    color: #2c282c;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5% 0 10px 30%;
+    padding: 10px;
+    width: 300px;
+}
+.btn_m_alert{
+	 background-color: #fcffd3;
+    border-radius: 10px;
+    color: #5f5f5f;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15% 0 10px 15px;
+    padding: 10px;
+    width: 300px;
+    color: #2c282c;
+}
+.btn_m_ask{
+	 background-color: #fcffd3;
+    border-radius: 10px;
+    color: #5f5f5f;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15% 0 10px 15px;
+    padding: 10px;
+    width: 300px;
+    color: #2c282c;
+}
+.ask_ok{
+	 background-color: #e4b16b;
+    border: 1px solid #443c38;
+    border-radius: 10px;
+    box-shadow: 1px 2px 22px;
+    font-weight: bold;
+    height: 180px;
+    margin: 120px 0 0 270px;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    width: 650px;
+}
+.alert_ok{
+	 background-color: #e4b16b;
+    border: 1px solid #443c38;
+    border-radius: 10px;
+    box-shadow: 1px 2px 22px;
+    font-weight: bold;
+    height: 180px;
+    margin: 120px 0 0 270px;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    width: 650px;
+}
+#enter_text{
+	width:100%;
+	height:auto;
+	text-align: center;
+	font-size:20px;
+	padding-top: 60px;
+}
+.sh_li{
+	width: 750px;
+	height: auto;
+	background-color: #bbb;
+	position: absolute;
+	margin: 15px 0 0 220px;
+	border-radius: 10px;
+	box-shadow: 1px 2px 22px;
+}
+
+
+/*////////city interior/////////*/
+.buildings:hover{
+	float: left;
+	margin: 300px 0 0 35px;
+	width: 181px;
+	height: 70px;
+	
+	
+	position: sticky;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 1px 1px 22px;
+	
+}
+.bld{
+	position:absolute;
+	border-radius: 5px;
+    cursor: pointer;
+    font-family: italic;
+    text-align: center;
+   /* opacity:0.5;
+    background-color:#fff;*/
+}
+/*////////////////////Reno/////////////////*/
+.stable{
+	background: url(../img/citys/stable.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 320px 0 0 35px;
+   cursor:pointer;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 281px;
+    position:absolute;
+}
+.stable:hover{
+	background: url(../img/citys/stable.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 320px 0 0 35px;
+   cursor:pointer;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 281px;
+    position:absolute;
+}
+.jail{
+	background: rgba(0, 0, 0, 0) url("../img/citys/jail.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 130px;
+    margin: 330px 0 0 385px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 101px;
+    position:absolute;
+}
+.jail:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/jail.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 130px;
+    margin: 330px 0 0 385px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 101px;
+    position:absolute;
+}
+.saloon{
+	background: rgba(0, 0, 0, 0) url("../img/citys/saloon.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 270px 0 0 505px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 221px;
+	cursor:pointer;
+	position:absolute;
+}
+.saloon:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/saloon.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 270px 0 0 505px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 221px;
+    cursor:pointer;
+    position:absolute;
+}
+.shop{
+	background: url(../img/citys/shop.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 300px 0 0 725px;
+    cursor:pointer;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 181px;
+    position:absolute;
+}
+.shop:hover{
+	background: url(../img/citys/shop.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+
+    border-radius: 5px;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 300px 0 0 725px;
+    cursor:pointer;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 181px;
+    position:absolute;
+}
+.gun{
+	background: rgba(0, 0, 0, 0) url("../img/citys/guns.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 345px 0 0 905px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 151px;
+    position:absolute;
+}
+.gun:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/guns.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    font-family: italic;
+    font-size: 18px;
+    height: 170px;
+    margin: 345px 0 0 905px;
+    padding-top: 30px;
+    position: sticky;
+    text-align: center;
+    width: 151px;
+    position:absolute;
+}/*////////////////////redwood/////////////////*/
+
+.stable_redwood{
+     height: 130px;
+    margin: 290px 0 0 35px;
+    padding-top: 30px;
+    width: 231px;
+}
+.stable_redwood:hover{
+	background: url(../img/citys/contur/redwood/contur_stable_redwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+     height: 130px;
+    margin: 290px 0 0 26px;
+    padding-top: 30px;
+    width: 295px;
+}
+.jail_redwood{
+    height: 115px;
+    margin: 270px 0 0 294px;
+    padding-top: 30px;
+    width: 101px;
+}
+.jail_redwood:hover{
+	background: url("../img/citys/contur/redwood/contur_jail_redwood.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+    height: 110px;
+margin: 272px 0 0 283px;
+padding-top: 30px;
+width: 125px;
+}
+.saloon_redwood{
+   height: 170px;
+    margin: 230px 0 0 455px;
+    padding-top: 30px;
+    width: 231px;
+
+}
+.saloon_redwood:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/redwood/contur_saloon_redwood.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+     height: 185px;
+    margin: 213px 0 0 430px;
+    padding-top: 30px;
+    width: 281px;
+}
+.shop_redwood{
+    height: 170px;
+    margin: 230px 0 0 725px;
+    padding-top: 30px;
+    width: 181px;
+}
+.shop_redwood:hover{
+	/**/background: url(../img/citys/contur/redwood/contur_shop_r.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    font-size: 18px;
+    height: 198px;
+    margin: 200px 0 0 705px;
+    padding-top: 30px;
+    width: 228px;
+}
+.gun_redwood{
+    height: 120px;
+    margin: 285px 0 0 915px;
+    padding-top: 30px;
+    width: 151px;
+}
+.gun_redwood:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/redwood/contur_gun_redwood.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+     height: 120px;
+    margin: 275px 0 0 909px;
+    padding-top: 30px;
+    width: 173px;
+}
+
+/*////////////////////Doyle/////////////////*/
+
+.stable_doyle{
+     height: 160px;
+	margin: 270px 0 0 28px;
+	padding-top: 30px;
+	width: 141px;
+}
+.stable_doyle:hover{
+	background: url(../img/citys/contur/doyle/contur_stable_doyle.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+      height: 178px;
+    margin: 256px 0 0 28px;
+    padding-top: 30px;
+    width: 164px;
+}
+.jail_doyle{
+    height: 80px;
+margin: 320px 0 0 234px;
+padding-top: 30px;
+width: 171px;
+}
+.jail_doyle:hover{
+	background: url("../img/citys/contur/doyle/contur_jail_doyle.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+    height: 80px;
+margin: 320px 0 0 240px;
+padding-top: 30px;
+width: 171px;
+}
+.saloon_doyle{
+   height: 170px;
+margin: 230px 0 0 450px;
+padding-top: 30px;
+width: 231px;
+
+}
+.saloon_doyle:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/doyle/contur_saloon_doyle.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 190px;
+    margin: 220px 0 0 440px;
+    padding-top: 30px;
+    width: 263px;
+}
+.shop_doyle{
+    height: 210px;
+margin: 210px 0 0 705px;
+padding-top: 30px;
+width: 181px;
+}
+.shop_doyle:hover{
+	background: url("../img/citys/contur/doyle/contur_shop_doyle.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 235px;
+    margin: 200px 0 0 703px;
+    padding-top: 30px;
+    width: 196px;
+}
+.gun_doyle{
+    height: 220px;
+margin: 215px 0 0 925px;
+padding-top: 30px;
+width: 161px;
+}
+.gun_doyle:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/doyle/contur_gun_doyle.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 260px;
+    margin: 188px 0 0 855px;
+    padding-top: 30px;
+    width: 234px;
+}
+/*////////////////////Silver Spring/////////////////*/
+
+.stable_silver_spring{	
+     height: 160px;
+    margin: 210px 0 0 28px;
+    padding-top: 30px;
+    width: 310px;
+}
+.stable_silver_spring:hover{
+	background: url(../img/citys/contur/silver_springs/contur_stable_Silver-Spring.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+     height: 215px;
+    margin: 150px 0 0 28px;
+    padding-top: 30px;
+    width: 320px;
+}
+.jail_silver_spring{
+     height: 165px;
+    margin: 250px 0 0 934px;
+    padding-top: 30px;
+    width: 151px;
+}
+.jail_silver_spring:hover{
+	background: url("../img/citys/contur/silver_springs/contur_jail_Silver-Spring.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+     height: 165px;
+    margin: 250px 0 0 920px;
+    padding-top: 30px;
+    width: 170px;
+}
+.saloon_silver_spring{
+  height: 100px;
+    margin: 250px 0 0 350px;
+    padding-top: 30px;
+    width: 151px;
+
+}
+.saloon_silver_spring:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/silver_springs/contur_saloon_Silver-Spring.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 94px;
+    margin: 250px 0 0 340px;
+    padding-top: 30px;
+    width: 164px;
+}
+.shop_silver_spring{
+   height: 210px;
+    margin: 180px 0 0 590px;
+    padding-top: 30px;
+    width: 161px;
+}
+.shop_silver_spring:hover{
+	background: url(../img/citys/contur/silver_springs/contur_shop_Silver-Spring.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 220px;
+    margin: 180px 0 0 586px;
+    padding-top: 30px;
+    width: 181px;
+}
+.gun_silver_spring{
+   height: 170px;
+    margin: 235px 0 0 765px;
+    padding-top: 30px;
+    width: 161px;
+}
+.gun_silver_spring:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/silver_springs/contur_gun_Silver-Spring.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+     height: 170px;
+    margin: 235px 0 0 728px;
+    padding-top: 30px;
+    width: 211px;
+}
+/*////////////////////bridgeport/////////////////*/
+
+.stable_bridgeport{
+     height: 160px;
+    margin: 210px 0 0 28px;
+    padding-top: 30px;
+    width: 240px;
+}
+.stable_bridgeport:hover{
+	background: url(../img/citys/contur/bridgeport/contur_stable_bridgeport.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+      height: 188px;
+    margin: 198px 0 0 28px;
+    padding-top: 30px;
+    width: 255px;
+}
+.jail_bridgeport{
+     height: 95px;
+    margin: 200px 0 0 854px;
+    padding-top: 30px;
+    width: 91px;
+}
+.jail_bridgeport:hover{
+	background: url("../img/citys/contur/bridgeport/contur_jail_bridgeport.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+    height: 100px;
+    margin: 200px 0 0 843px;
+    padding-top: 30px;
+    width: 114px;
+}
+.saloon_bridgeport{
+  height: 170px;
+    margin: 117px 0 0 280px;
+    padding-top: 30px;
+    width: 211px;
+
+}
+.saloon_bridgeport:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/bridgeport/contur_saloon_bridgeport.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+     height: 205px;
+    margin: 95px 0 0 154px;
+    padding-top: 30px;
+    width: 411px;
+}
+.shop_bridgeport{
+    height: 110px;
+    margin: 180px 0 0 625px;
+    padding-top: 30px;
+    width: 211px;
+}
+.shop_bridgeport:hover{
+	background: url(../img/citys/contur/bridgeport/contur_shop_bridgeport.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+      height: 110px;
+    margin: 185px 0 0 612px;
+    padding-top: 30px;
+    width: 246px;
+}
+.gun_bridgeport{
+   height: 187px;
+    margin: 135px 0 0 955px;
+    padding-top: 30px;
+    width: 131px;
+}
+.gun_bridgeport:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/bridgeport/contur_gun_bridgeport.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 220px;
+    margin: 98px 0 0 945px;
+    padding-top: 30px;
+    width: 144px;
+}
+/*////////////////////Carson/////////////////*/
+
+.stable_carson{
+     height: 130px;
+    margin: 230px 0 0 848px;
+    padding-top: 30px;
+    width: 240px;
+}
+.stable_carson:hover{
+	background: url(../img/citys/contur/carson/contur_stable_carson.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+     height: 119px;
+    margin: 235px 0 0 798px;
+    padding-top: 30px;
+    width: 290px;
+}
+.jail_carson{
+     height: 120px;
+    margin: 280px 0 0 27px;
+    padding-top: 30px;
+    width: 118px;
+}
+.jail_carson:hover{
+	background: url("../img/citys/contur/carson/contur_jail_carson.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+    height: 120px;
+    margin: 284px 0 0 25px;
+    padding-top: 30px;
+    width: 122px;
+}
+.saloon_carson{
+  height: 170px;
+    margin: 217px 0 0 510px;
+    padding-top: 30px;
+    width: 271px;
+
+}
+.saloon_carson:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/carson/contur_saloon_carson.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+     height: 190px;
+    margin: 200px 0 0 490px;
+    padding-top: 30px;
+    width: 341px;
+}
+.shop_carson{
+   height: 150px;
+    margin: 240px 0 0 320px;
+    padding-top: 30px;
+    width: 175px;
+}
+.shop_carson:hover{
+	background: url("../img/citys/contur/carson/contur_shop_carson.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+     height: 150px;
+    margin: 240px 0 0 305px;
+    padding-top: 30px;
+    width: 200px;
+}
+.gun_carson{
+    height: 187px;
+    margin: 205px 0 0 155px;
+    padding-top: 30px;
+    width: 151px;
+}
+.gun_carson:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/carson/contur_gun_carson.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+   height: 192px;
+    margin: 200px 0 0 138px;
+    padding-top: 30px;
+    width: 178px;
+}
+/*////////////////////Virginia/////////////////*/
+
+.stable_virginia{
+     height: 460px;
+    margin: 30px 0 0 938px;
+    padding-top: 30px;
+    width: 149px;
+}
+.stable_virginia:hover{
+	background: url("../img/citys/contur/virginia/contur_stable_virginia.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+     height: 490px;
+    margin: 20px 0 0 897px;
+    padding-top: 30px;
+    width: 193px;
+}
+.jail_virginia{
+     height: 290px;
+    margin: 180px 0 0 27px;
+    padding-top: 30px;
+    width: 258px;
+}
+.jail_virginia:hover{
+	background: url("../img/citys/contur/virginia/contur_jail_virginia.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+     height: 310px;
+    margin: 175px 0 0 27px;
+    padding-top: 30px;
+    width: 270px;
+}
+.saloon_virginia{
+ height: 180px;
+    margin: 260px 0 0 320px;
+    padding-top: 30px;
+    width: 289px;
+
+}
+.saloon_virginia:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/virginia/contur_saloon_virginia.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 210px;
+    margin: 237px 0 0 305px;
+    padding-top: 30px;
+    width: 329px;
+}
+.shop_virginia{
+   height: 320px;
+    margin: 160px 0 0 810px;
+    padding-top: 30px;
+    width: 115px;
+}
+.shop_virginia:hover{
+	background: url(../img/citys/contur/virginia/contur_shop_virginia.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 360px;
+    margin: 135px 0 0 801px;
+    padding-top: 30px;
+    width: 127px;
+}
+.gun_virginia{
+    height: 187px;
+    margin: 265px 0 0 625px;
+    padding-top: 30px;
+    width: 179px;
+}
+.gun_virginia:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/virginia/contur_gun_virginia.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 203px;
+    margin: 260px 0 0 630px;
+    padding-top: 30px;
+    width: 189px;
+}
+/*////////////////////westwood/////////////////*/
+
+.stable_westwood{
+     height: 170px;
+    margin: 250px 0 0 188px;
+    padding-top: 30px;
+    width: 220px;
+}
+.stable_westwood:hover{
+	background: url(../img/citys/contur/westwood/contur_stable_westwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 173px;
+    margin: 250px 0 0 178px;
+    padding-top: 30px;
+    width: 250px;
+}
+.jail_westwood{
+     height: 150px;
+    margin: 280px 0 0 27px;
+    padding-top: 30px;
+    width: 148px;
+}
+.jail_westwood:hover{
+	background: url("../img/citys/contur/westwood/contur_jail_westwood.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+   height: 160px;
+    margin: 270px 0 0 27px;
+    padding-top: 30px;
+    width: 161px;
+}
+.saloon_westwood{
+  height: 130px;
+    margin: 260px 0 0 420px;
+    padding-top: 30px;
+    width: 221px;
+
+}
+.saloon_westwood:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/westwood/contur_saloon_westwood.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 145px;
+    margin: 252px 0 0 418px;
+    padding-top: 30px;
+    width: 227px;
+}
+.shop_westwood{
+   height: 270px;
+    margin: 150px 0 0 950px;
+    padding-top: 30px;
+    width: 140px;
+}
+.shop_westwood:hover{
+	background: url("../img/citys/contur/westwood/contur_shop_westwood.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 285px;
+    margin: 150px 0 0 915px;
+    padding-top: 30px;
+    width: 175px;
+}
+.gun_westwood{	
+    height: 187px;
+    margin: 225px 0 0 785px;
+    padding-top: 30px;
+    width: 156px;
+}
+.gun_westwood:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/westwood/contur_gun_westwood.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 195px;
+    margin: 222px 0 0 773px;
+    padding-top: 30px;
+    width: 176px;
+}
+/*////////////////////reno/////////////////*/
+
+.stable_reno{
+     height: 250px;
+    margin: 160px 0 0 28px;
+    padding-top: 30px;
+    width: 200px;
+}
+.stable_reno:hover{
+	background: url("../img/citys/contur/reno/contur_stable_reno.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 280px;
+    margin: 145px 0 0 28px;
+    padding-top: 30px;
+    width: 231px;
+}
+.jail_reno{
+     height: 155px;
+    margin: 250px 0 0 244px;
+    padding-top: 30px;
+    width: 168px;
+}
+.jail_reno:hover{
+	background: url("../img/citys/contur/reno/contur_jail_reno.png");
+    background-size:100%;
+	background-repeat: no-repeat;
+   height: 169px;
+    margin: 250px 0 0 225px;
+    padding-top: 30px;
+    width: 210px;
+}
+.saloon_reno{
+  height: 200px;
+    margin: 200px 0 0 610px;
+    padding-top: 30px;
+    width: 328px;
+
+}
+.saloon_reno:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/reno/contur_saloon_reno.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 225px;
+    margin: 185px 0 0 590px;
+    padding-top: 30px;
+    width: 365px;
+}
+.shop_reno{
+   height: 270px;
+    margin: 150px 0 0 950px;
+    padding-top: 30px;
+    width: 140px;
+}
+.shop_reno:hover{
+	background: url("../img/citys/contur/reno/contur_shop_reno.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+    height: 230px;
+    margin: 170px 0 0 930px;
+    padding-top: 30px;
+    width: 160px;
+}
+.gun_reno{
+    height: 97px;
+    margin: 308px 0 0 420px;
+    padding-top: 30px;
+    width: 156px;
+}
+.gun_reno:hover{
+	background: rgba(0, 0, 0, 0) url("../img/citys/contur/reno/contur_gun_reno.png");
+     background-size:100%;
+	background-repeat: no-repeat;
+    height: 97px;
+    margin: 304px 0 0 403px;
+    padding-top: 30px;
+    width: 190px;
+}
+.tbl1{
+	 background-color: #5057a3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+.tbl2{
+	width:100%; 
+	height:40px; 
+	background-color:#A34D13;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+.tbl3{
+	width:100%; 
+	height:40px; 
+	background-color:#59A346;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+.tbl4{
+	width:100%; 
+	height:40px; 
+	background-color:#9EA380;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+.tbl5{
+	width:100%; 
+	height:40px; 
+	background-color:#339FA3;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+.li_content{
+	margin:0 auto;
+	width:70%;
+	height:auto;
+	padding:10px;
+
+}
+.plus{
+	background-color: #f3f2da;
+    border-radius: 5px;
+    color: #5f5f5f;
+    float: right;
+    font-size: 25px;
+    height: 40px;
+    width: 50px;
+}
+.city_name{
+	
+	color: #470e03;
+    font-family: Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+    height: 60px;
+    margin: 495px 0 0 35px;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+}
+/*////////////////////inventory//////////////////*/
+.inv{
+	background: radial-gradient(#fff 30%, #f6f0c6 90%) ;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    float: left;
+    height: 50px;
+    margin: 3px;
+    width: 50px;
+    border-radius:5px;
+}
+.inv_inn{
+	float:left;
+	width:50px;
+	height:50px;
+	background-color:#fff;
+
+}
+.inv_wrap{
+	width:200px;
+	height:550px;
+	margin:0 auto;
+	background-color:#bbb;
+	position: relative;
+	float: right;
+}
+.in_wr{
+	float: left;
+    height: 70px;
+    margin: 5px 0 0 25px;
+    width: 30%;
+}
+.wrp{
+	 background-color: #fff;
+    float: left;
+    height: 40px;
+    margin-right: 20px;
+    width: 40px;
+}
+
+
+/*________________saloon________________*/
+
+
+.traveler_img{
+	background-image: url(../img/icon/traveler.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+
+.deliver_img{
+	background-image: url(../img/icon/buisnesman.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.packege_img{
+	background-image: url(../img/icon/package.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.barman_img{
+	background-image: url(../img/icon/barman.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.shooter_img{
+	background-image: url(../img/icon/cowboy_shooter.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.doctor_img{
+	background-image: url(../img/icon/doctor.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+/*________________shop__________________*/
+.dr_img{
+	background-image: url(../img/icon/whisky.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.bl_img{
+	background-image: url(../img/icon/ammo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.br_img{
+	background-image: url(../img/icon/brad.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.gld_img{
+	background-image: url(../img/icon/gold.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.dm_img{
+	background-image: url(../img/icon/dynamite.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.mt_img{
+	background-image: url(../img/icon/meet.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.rp_img{
+	background-image: url(../img/icon/rope.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.tl_img{
+	background-image: url(../img/icon/pickaxe.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+}
+.wag_img{
+	background-image: url(../img/icon/horse_a.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 5px auto 0;
+}
+.wag1_img{
+	background-image: url(../img/icon/diligence_a.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 5px 20px 0 auto;
+}
+.wag2_img{
+	background-image: url(../img/icon/diligence_b.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 5px 20px 0 auto;
+}
+.wag3_img{
+	background-image: url(../img/icon/diligence_c.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 5px 20px 0 auto;
+}
+.sp_wr {
+   background-color: #9b9493;
+    color: #fff;
+    font-weight: bold;
+    height: 40px;
+    margin-bottom: -15px;
+}
+.test{
+	 background-color: #806F6C;
+    float: left;
+    height: 90px;
+    margin: 460px 0 0;
+    position: absolute;
+    width: 100%;
+}
+.glass{
+	width: 1300px;
+	height: 550px;
+	position: absolute;
+}
+/*____________________________pers____________________________*/
+.pers_stop{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_a.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+}
+.pers_move_forward{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+
+}
+.pers_move_backward{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1022px;
+    margin-top: 111px;
+    
+    -webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+/*____________move dilig_1_______*/
+.dilig_1_move_forward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig1.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+
+    -webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+.dilig_1_move_backward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig1.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+}
+/*______________move dilig2_________*/
+.dilig_2_move_forward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig2.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+
+    -webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+.dilig_2_move_backward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig2.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+}
+/*_________________move dilig3__________*/
+.dilig_3_move_forward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig3.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+
+    -webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+.dilig_3_move_backward{
+	width: 100px;
+	height: 50px;
+	background-image: url(../img/icon/cowboy_dilig3.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	text-align: center;
+	position: absolute;
+	 margin-left: 1002px;
+    margin-top: 111px;
+}
+.game_proc{
+	width:100%;
+	height:auto;
+}
+.win{
+	background-color: #51c93f;
+    background-image: url("../img/win.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: helvetica;
+    font-size: 24px;
+    font-weight: bold;
+    height: 550px;
+    margin: 0 auto;
+    padding: 100px;
+    text-align: center;
+    width: 800px;
+}
+.lose{
+	background-color: #51c93f;
+    background-image: url("../img/lose.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: helvetica;
+    font-size: 24px;
+    font-weight: bold;
+    height: 550px;
+    margin: 0 auto;
+    padding: 100px;
+    text-align: center;
+    width: 800px;
+}
+.invent{
+	 height: auto;
+    margin: 20px;
+    position: absolute;
+    width: 100%;
+}
+/*__________________battle______________*/
+.battlefield_doyle{       										/*7*/
+	background: url(../img/citys/screen_doyle.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_bridgeport{										/*8*/
+	background: url(../img/citys/screen_bridgeport.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_carson{											/*3*/
+	background: url(../img/citys/screen_carson.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_redwood{											/*4*/
+	background: url(../img/citys/screen_redwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_reno{												/*1*/
+	background: url(../img/citys/screen_reno.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_silver_spr{										/*5*/
+	background: url(../img/citys/screen_silver_spr.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_virginia{											/*2*/
+	background: url(../img/citys/screen_virginia.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battlefield_westwood{											/*6*/
+	background: url(../img/citys/screen_westwood.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:1120px;
+	height:550px;
+	display: block;
+	position:absolute;
+}
+.battle_info{
+	background-color: #bbb;
+    height: 90px;
+    margin: 460px 0 0;
+    position: absolute;
+    width: 100%;
+}
+.hero_a_image{                                            /*marcinery a*/
+    background-image: url("../img/heroes_a_merc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 255px 20px 0 828px;
+    position: absolute;
+    width: 50px;
+}
+.hero_a_image_shooting{ 
+    background-image: url("../img/heroes_a_shooting_merc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 255px 20px 0 828px;
+    position: absolute;
+    width: 64px;
+}
+.hero_a_image_down{                                       
+    background-image: url("../img/heroes_a_down_merc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 60px;
+    margin: 325px 20px 0 778px;
+    position: absolute;
+    width: 123px;
+}   
+
+.hero_b_image{                                            /*marcinery a*/
+    background-image: url("../img/heroes_a_merc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 355px 20px 0 788px;
+    position: absolute;
+    width: 50px;
+}
+.hero_b_image_shooting{ 
+    background-image: url("../img/heroes_a_shooting_merc.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 355px 20px 0 788px;
+    position: absolute;
+    width: 64px;
+}
+.hero_b_image_down{                                       
+    background-image: url("../img/heroes_a_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 60px;
+    margin: 355px 20px 0 738px;
+    position: absolute;
+    width: 123px;
+}   
+.hero_image{ 											/*hero*/
+	background-image: url("../img/heroes_a.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 295px 20px 0 898px;
+    position: absolute;
+    width: 50px;
+}
+.hero_image_shooting{ 
+	background-image: url("../img/heroes_a_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 120px;
+    margin: 295px 20px 0 885px;
+    position: absolute;
+    width: 64px;
+}
+.hero_image_down{ 										
+	background-image: url("../img/heroes_a_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 60px;
+    margin: 355px 20px 0 865px;
+    position: absolute;
+    width: 123px;
+}															/*hero end*/
+.bandit_a_image{ 
+	
+    display: block;
+    height: 120px;
+    margin: 250px 20px 0 170px;
+    position: absolute;
+    width: 45px;
+    cursor:crosshair;
+}
+.bandit_a_image_shooting{ 							/*              bandit a shooting*/
+     display: block;
+    height: 120px;
+    margin: 250px 20px 0 170px;
+    position: absolute;
+    width: 59px;
+    cursor:crosshair;
+}
+.bandit_a_image_down{ 
+	
+     cursor: crosshair;
+    display: block;
+    height: 60px;
+    margin: 310px 20px 0 150px;
+    position: absolute;
+    width: 104px;
+}
+.bandit_b_image{ 
+	
+    display: block;
+    height: 120px;
+    margin: 280px 20px 0 250px;
+    position: absolute;
+    width: 45px;
+    cursor:crosshair;
+}
+.bandit_b_image_shooting{ 							/*              bandit a shooting*/
+	
+    display: block;
+    height: 120px;
+    margin: 280px 20px 0 250px;
+    position: absolute;
+    width: 59px;
+    cursor:crosshair;
+}
+.bandit_b_image_down{ 
+     cursor: crosshair;
+    display: block;
+    height: 60px;
+    margin: 360px 20px 0 230px;
+    position: absolute;
+    width: 105px;
+}
+
+.bandit_c_image{ 
+	
+    display: block;
+    height: 120px;
+    margin: 330px 20px 0 120px;
+    position: absolute;
+    width: 45px;
+    cursor:crosshair;
+}
+.bandit_c_image_shooting{ 									/*              bandit a shooting*/
+	
+    display: block;
+    height: 120px;
+    margin: 330px 20px 0 120px;
+    position: absolute;
+    width: 59px;
+    cursor:crosshair;
+}
+.bandit_c_image_down{ 
+	
+     cursor: crosshair;
+    display: block;
+    height: 60px;
+    margin: 390px 20px 0 120px;
+    position: absolute;
+    width: 125px;
+}
+.bandit_type_a{
+	  background-image: url("../img/bandit1.png");					/*bandit a start*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.bandit_type_a_shooting{
+	  background-image: url("../img/bandit1_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_a_down{												/*bandit a end*/
+	  background-image: url("../img/bandit1_down.png");				
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+   
+}
+.bandit_type_b{														/*bandit b start*/
+	  background-image: url("../img/bandit2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_b_shooting{
+	  background-image: url("../img/bandit2_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_b_down{
+	  background-image: url("../img/bandit2_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+																		/*bandit b end*/
+.bandit_type_c{															/*bandit c */				
+	  background-image: url("../img/bandit3.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_c_shooting{																			
+	  background-image: url("../img/bandit3_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_c_down{																			
+	  background-image: url("../img/bandit3_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+																		/*bandit c end*/
+.bandit_type_d{
+	  background-image: url("../img/bandit4.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_d_shooting{
+	  background-image: url("../img/bandit4_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_d_down{
+	  background-image: url("../img/bandit4_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_e{
+	  background-image: url("../img/bandit5.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_e_shooting{
+	  background-image: url("../img/bandit5_shooting.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.bandit_type_e_down{
+	  background-image: url("../img/bandit5_down.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.health_sign_a{
+	position:absolute;
+	width:50px;
+	height:6px;
+	background-color:#E42A00;
+}
+.health_sign_b{
+	position:absolute;
+	width:50px;
+	height:6px;
+	background-color:#E42A00;
+}
+.health_sign_c{
+	position:absolute;
+	width:50px;
+	height:6px;
+	background-color:#E42A00;
+}
+.health_sign_hero{
+	position:absolute;
+	width:50px;
+	height:6px;
+	background-color:#E42A00;	
+}
+.health_sign_a_hero{
+    position:absolute;
+    width:50px;
+    height:6px;
+    background-color:#E42A00;   
+}
+.health_sign_b_hero{
+    position:absolute;
+    width:50px;
+    height:6px;
+    background-color:#E42A00;   
+}
+.sign{
+	position:absolute;
+	width:50px;
+	height:6px;
+	margin: -15px 0 0 -10px;
+	border:1px solid #09090F;
+
+}
+.bullet{
+	background-color: #f6f491;
+    height: 3px;
+    margin: 320px 0 0 880px;
+    position: absolute;
+    width: 20px;
+}
+/*_____________________guns_____________________*/
+.gun_a{
+	background-image: url(../img/gun0.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_b{
+	background-image: url(../img/gun1.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_c{
+	background-image: url(../img/gun2.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_d{
+	background-image: url(../img/gun3.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_e{
+	background-image: url(../img/gun4.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_f{
+	background-image: url(../img/gun5.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+.gun_g{
+	background-image: url(../img/gun6.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	width:40px;
+	height:40px;
+	margin: 0 20px 0 auto;
+}
+#li_cont{
+	height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    width: 70%;
+}
