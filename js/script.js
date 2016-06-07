@@ -1528,7 +1528,7 @@ test_btn.onclick=function(){
   	//alert(bandits_type_count+"<bandits_type_count|"+das+"<das"+bandit_numb+"<bandit_numb"+a_rez+"<a_rez|"+ct_y_rez+"<ct_y_rez|"+ct_x_rez+"<ct_x_rez|"+ya+"<ya|"+xa+"<xa|"+cont+"<cont|"+hearing_status+traveler_check+package);
 	//alert(bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|"+bandit_cnt_a+"<bandit_cnt_a|"+bandit_cnt_b+"<bandit_cnt_b|"+bandit_cnt_a+"<bandit_cnt_c|"+bandit_shooting+"<bandit_shooting|"+bandit_hit_a+"<bandit_hit_a|"+bandit_hit_b+"<bandit_hit_b|"+bandit_hit_c+"<bandit_hit_c|"+bandit_shooting+"<bandit_shooting|");
 	//alert( hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+hero_b_heals+"<hero_b_heals|"+hero_a_hit+"<hero_a_hit|"+hero_b_hit+"<hero_b_hit|");
-	alert( hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|");
+	alert( m+"<m|"+hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|");
 }
 
 contracts.onclick = function(){
@@ -2155,7 +2155,7 @@ ok.onclick=function(){
 	}
 }
 
-var m = 1;
+//var m = 1;
 var dy=1;
 var time_dy =0;
 
@@ -2306,7 +2306,7 @@ function move(){
 				merc_a_rend()
 				marciner_city()
 					packege_random()
-					merciner_time()
+					//merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2345,7 +2345,7 @@ function move(){
 				merc_a_rend()
 				marciner_city()
 					packege_random()
-					merciner_time()
+				//	merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2384,7 +2384,7 @@ function move(){
 				merc_a_rend()
 				marciner_city()
 					packege_random()
-					merciner_time()
+				//	merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2433,7 +2433,7 @@ function move(){
 			merc_a_rend()
 			marciner_city()
 					packege_random()
-					merciner_time()
+				//	merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2473,7 +2473,7 @@ function move(){
 				merc_a_rend()
 				marciner_city()
 					packege_random()
-					merciner_time()
+				//	merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2512,7 +2512,7 @@ function move(){
 				merc_a_rend()
 				marciner_city()
 					packege_random()
-					merciner_time()
+				//	merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
