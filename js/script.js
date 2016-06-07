@@ -2,7 +2,7 @@ var a=5;
 var b=0;
 var c=0;
 var inv = 0;
-var money_default=50000;
+var money_default=50;
 var money_cash= money_default;
 
 var travel_rand_city = 0;
