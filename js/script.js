@@ -968,8 +968,8 @@ if(money_default>=merc_price_trans){
 							money_default=money_default-merc_price_trans;	
 								money.innerHTML =money_default + " $";
 					money_cash= money_default;	
-				 /*	hero_a_hit=mrc_hit;
-				 	
+					hero_a_hit=mrc_hit;
+				  /*	
 				 	time_hero_a=mrc_time_rand+m;
 				  		*/
 						//mrc_cost
@@ -981,6 +981,7 @@ if(money_default>=merc_price_trans){
 							hero_b_pos=true; 
 							merc_price_trans=((mrc_cost_rand*mrc_hit*hls_mrc)*mrc_time_rand);
 							//hero_b_health_mer = 50;
+							hero_b_hit=mrc_hit;
 							merccnt=1;
 							hero_b_health_mer=hls_mrc;
 							hero_b_pers_tr=(50/hero_b_health_mer);
@@ -2762,8 +2763,14 @@ function battle_finish(){
 }
 function health_cnt(){
 	hit = 50/bandit_a_health;
+	if (hero_b_pos == true){
+hit=hit*hero_b_hit;
+	}
+		else if(hero_b_pos == true){
+hit=hit*hero_b_hit;
+		}else{
 	hit=hit*gun_dmg;
-
+}
 	bandit_hit_a=bandit_hit_a/0.5;
 		bandit_hit_b=bandit_hit_b/0.5;
 			bandit_hit_c=bandit_hit_c/0.5;
@@ -2948,6 +2955,7 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
 		/*	if((hero_a_pos==true)||(hero_b_pos==true)){
  	bullet_fly_sec_c()
  }	*/
+
 	if(bandit_c_health_transfer>1){
 		bandit_shooting=3;
 		attack()
@@ -3065,15 +3073,14 @@ function shootings(){
 	}
 }
 
-
 function shootings_end(){
-	if(bandit_shooting==1){
+	if((bandit_shooting==1)&&(bandit_a == true)){
 		
 			bandit_first.className=style_bandits_type[bandit_cnt_a]+" bandit_a_image";
-	}else if(bandit_shooting==2){
+	}else if((bandit_shooting==2)&&(bandit_b == true)){
 
 			bandit_second.className=style_bandits_type[bandit_cnt_b]+" bandit_b_image";
-	}else if(bandit_shooting==3){
+	}else if((bandit_shooting==2)&&(bandit_b == true)){
 
 			bandit_third.className=style_bandits_type[bandit_cnt_c]+" bandit_c_image";
 	}
@@ -3116,12 +3123,15 @@ bullets.className = "bullet"
 if(hero_a_pos==true){
 	bullets_x = 280;
 	bullets_y = 828;
+	 hit=hit*hero_a_hit;
 }else if(hero_b_pos==true){
 	bullets_x = 370;
 	bullets_y = 828;
+	hit=hit*hero_b_hit;
 }else{
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 }
 bullet = setInterval(function(){	
 	if((bullets_x>=280)&&(bullets_y>=190)){
@@ -3134,7 +3144,6 @@ bullet = setInterval(function(){
 				bullets_x = bullets_x + 0;
 				bullets_y = bullets_y - 10;
 				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-
 
 	}else if(bandit_a_health_transfer<=1){
 		
@@ -3164,6 +3173,7 @@ function bullet_fly_sec_a(){
 	bullets.className = "bullet"
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 bullet = setInterval(function()
 {	if((bullets_x>=280)&&(bullets_y>=190)){
 	bullets_x = bullets_x - 0.5;
@@ -3201,12 +3211,15 @@ bullets.className = "bullet"
 if(hero_a_pos==true){
 	bullets_x = 280;
 	bullets_y = 828;
+	 hit=hit*hero_a_hit;
 }else if(hero_b_pos==true){
 	bullets_x = 370;
 	bullets_y = 828;
+	hit=hit*hero_b_hit;
 }else{
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 }
 bullet = setInterval(function(){	
 		if((bullets_x>=320)&&(bullets_y>=270)){
@@ -3251,6 +3264,7 @@ function bullet_fly_sec_b(){
 	bullets.className = "bullet"
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 bullet = setInterval(function()
 {	if((bullets_x>=320)&&(bullets_y>=270)){
 	bullets_x = bullets_x - 0;
@@ -3284,18 +3298,20 @@ bullet = setInterval(function()
 	}, 10);
 }
 
-
 function bullet_fly_c(){
 bullets.className = "bullet"
 if(hero_a_pos==true){
 	bullets_x = 280;
 	bullets_y = 828;
+	 hit=hit*hero_a_hit;
 }else if(hero_b_pos==true){
 	bullets_x = 370;
 	bullets_y = 828;
+	hit=hit*hero_b_hit;
 }else{
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 }
 //finish_battle()
 bullet = setInterval(function(){
@@ -3337,6 +3353,7 @@ function bullet_fly_sec_c(){
 	bullets.className = "bullet"
 	bullets_x = 320;
 	bullets_y = 880;
+	hit=hit*gun_dmg;
 bullet = setInterval(function()
 {	if((bullets_x<=370)&&(bullets_y>=170)){
 	bullets_x = bullets_x + 0.5;
