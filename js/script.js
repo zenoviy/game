@@ -1529,7 +1529,8 @@ test_btn.onclick=function(){
   	//alert(bandits_type_count+"<bandits_type_count|"+das+"<das"+bandit_numb+"<bandit_numb"+a_rez+"<a_rez|"+ct_y_rez+"<ct_y_rez|"+ct_x_rez+"<ct_x_rez|"+ya+"<ya|"+xa+"<xa|"+cont+"<cont|"+hearing_status+traveler_check+package);
 	//alert(bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|"+bandit_cnt_a+"<bandit_cnt_a|"+bandit_cnt_b+"<bandit_cnt_b|"+bandit_cnt_a+"<bandit_cnt_c|"+bandit_shooting+"<bandit_shooting|"+bandit_hit_a+"<bandit_hit_a|"+bandit_hit_b+"<bandit_hit_b|"+bandit_hit_c+"<bandit_hit_c|"+bandit_shooting+"<bandit_shooting|");
 	//alert( hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+hero_b_heals+"<hero_b_heals|"+hero_a_hit+"<hero_a_hit|"+hero_b_hit+"<hero_b_hit|");
-	alert( hit_a+''+hit_b+''+hit_c+"<hit_a,b,c|"+hit+"<hit|"+hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|");
+	//alert( hit_a+''+hit_b+''+hit_c+"<hit_a,b,c|"+hit+"<hit|"+hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|");
+	alert(bullets_x+"<bullets_x|"+bullets_y+"<bullets_y|");
 }
 
 contracts.onclick = function(){
@@ -3018,7 +3019,7 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
  	bullet_fly_sec_c()
  }	*/
 
-	if(bandit_c_health_transfer>1){
+	if(bandit_c_health_transfer>0){
 		bandit_shooting=3;
 		attack()
 		}else{
@@ -3261,7 +3262,7 @@ bullet = setInterval(function()
 		 
 	}else{ 
 			bandit_a_health_transfer = bandit_a_health_transfer-hit_trasfer;
-						if(bandit_a_health_transfer<=0){
+						if(bandit_a_health_transfer<=1){
 	
 							bandit_first.className=style_bandits_down[bandit_cnt_a]+" bandit_a_image_down";
 							bandit_a = false;
@@ -3271,8 +3272,8 @@ bullet = setInterval(function()
 							hero.className="hero_image";
 							finish_battle()
 							bullets.className = "none";
-							/*if(bandit_a == true){
-					bandit_shooting=1;
+							if(bandit_c == true){
+					bandit_shooting=3;
 					//attack()
 				}else if(bandit_b == true){
 						bandit_shooting=2;
@@ -3282,7 +3283,7 @@ bullet = setInterval(function()
 			//bandit_third.className="bandit_type_a_down bandit_c_image_down";
 			bandit_numb = bandit_numb-1;
 				battle_win()
-			}
+			}/*
 					/*		if((bandit_shooting==1)&&(bandit_a == true)){
 						bullet_fly_reverse_a()
 							}else if((bandit_shooting==2)&&(bandit_b == true)){
@@ -3321,11 +3322,15 @@ if(hero_a_pos==true){
 	//hit_trasfer = hit_a;
 }
 bullet = setInterval(function(){	
-		if((bullets_x>=320)&&(bullets_y>=270)){
+		if((bullets_x==320)&&(bullets_y>=270)){
 //alert(1);
 	bullets_x = bullets_x - 0;
 	bullets_y = bullets_y - 10;
-	
+	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+		}else if((bullets_x>=320)&&(bullets_y>=270)){
+//alert(1);
+	bullets_x = bullets_x - 0.5;
+	bullets_y = bullets_y - 10;
 	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
 		}else if((bullets_x<=320)&&(bullets_y>=270)){
 				bullets_x = bullets_x + 0.5;
@@ -3395,18 +3400,16 @@ bullet = setInterval(function()
 			hero.className="hero_image";
 			finish_battle()
 			bullets.className = "none";
-			/*if(bandit_a == true){
+				if(bandit_a == true){
 					bandit_shooting=1;
-					//attack()
-				}else if(bandit_b == true){
-						bandit_shooting=2;
-					//attack()
+				}else if(bandit_c == true){
+						bandit_shooting=3;
 					//	finish_battle()
 				}else{
 			//bandit_third.className="bandit_type_a_down bandit_c_image_down";
 			bandit_numb = bandit_numb-1;
 				battle_win()
-			}
+			}/*
 			/*if((bandit_shooting==1)&&(bandit_a == true)){
 						bullet_fly_reverse_a()
 							}else if((bandit_shooting==2)&&(bandit_b == true)){
@@ -3430,18 +3433,12 @@ bullets.className = "bullet"
 if(hero_a_pos==true){
 	bullets_x = 280;
 	bullets_y = 828;
-	 //hit=hit*hero_a_hit;
-	// hit = hit_b;
 }else if(hero_b_pos==true){
 	bullets_x = 370;
 	bullets_y = 828;
-	//hit=hit*hero_b_hit;
-	//hit = hit_c;
 }else{
 	bullets_x = 320;
 	bullets_y = 880;
-	//hit=hit*gun_dmg;
-	//hit = hit_a;
 }
 //finish_battle()
 bullet = setInterval(function(){
@@ -3458,7 +3455,7 @@ bullet = setInterval(function(){
 		finish_battle()
 		
 		bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
-			bandit_c = false;
+		bandit_c = false;
 		hero.className="hero_image";
 		clearInterval(bullet)
 		 bullets.className = "none";
@@ -3467,7 +3464,6 @@ bullet = setInterval(function(){
 		
 		hero.className="hero_image";
 		 bullets.className = "none";
-
 		 clearInterval(bullet)
 		 if((hero_a_pos==true)||(hero_b_pos==true)){
 		 	// clearInterval(bullet)
@@ -3491,7 +3487,7 @@ bullet = setInterval(function()
 	bullets_x = bullets_x + 0.5;
 	bullets_y = bullets_y - 10;
 	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(bandit_c_health_transf/er<=1){
+	}else if(bandit_c_health_transfer<=1){
 		finish_battle()	
 		
 			bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
@@ -3516,18 +3512,16 @@ bullet = setInterval(function()
 			finish_battle()
 			bullets.className = "none";
 
-			/*if(bandit_a == true){
+			if(bandit_a == true){
 					bandit_shooting=1;
-					//attack()
 				}else if(bandit_b == true){
 						bandit_shooting=2;
-					//attack()
 					//	finish_battle()
 				}else{
 			//bandit_third.className="bandit_type_a_down bandit_c_image_down";
 			bandit_numb = bandit_numb-1;
 				battle_win()
-			}
+			}/*
 			/*if((bandit_shooting==1)&&(bandit_a == true)){
 						bullet_fly_reverse_a()
 							}else if((bandit_shooting==2)&&(bandit_b == true)){
@@ -3539,7 +3533,7 @@ bullet = setInterval(function()
 						//clearInterval(bullet)
 				}
 		clearInterval(bullet)
-		hero.className="hero_image";
+		hero.className ="hero_image";
 		 bullets.className = "none";
 		}
 	}, 10);
@@ -3573,16 +3567,17 @@ bullet = setInterval(function()
 		sign_h_a.className = "none";
 		//hero.className="hero_image";
 		hero_a_pos=false;
-		clearInterval(bullet)
+		
 		 bullets.className = "none";
-		 
+		 clearInterval(bullet)
 	}else{ 
 
 hero_a_health_mer=hero_a_health_mer-bandit_hit_a;
 		health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
-		clearInterval(bullet)
+		
 		hero_a_mer	.className="hero_a_image";
 		 bullets.className = "none";
+		 clearInterval(bullet)
 		}
 	}, 10);
 
@@ -3601,16 +3596,17 @@ bullet = setInterval(function()
 		sign_h_b.className = "none";
 		//hero.className="hero_image";
 		hero_b_pos=false;
+		
+		bullets.className = "none";
 		clearInterval(bullet)
-		 bullets.className = "none";
-		 
 	}else{ 
 
 hero_b_health_mer=hero_b_health_mer-bandit_hit_a;
 		health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
-		clearInterval(bullet)
+		
 		hero_b_mer.className="hero_b_image";
-		 bullets.className = "none";
+		bullets.className = "none";
+		clearInterval(bullet)
 		}
 	}, 10);
 
@@ -3624,15 +3620,17 @@ hero_b_health_mer=hero_b_health_mer-bandit_hit_a;
 		hero.className="hero_image_down ";
 		
 		//hero.className="hero_image";
+		
+		bullets.className = "none";
 		clearInterval(bullet)
-		 bullets.className = "none";
 	}else{ 
 
 hero_health=hero_health-bandit_hit_a;
 		health_sign_hero.style="width:"+hero_health+"px";
-		clearInterval(bullet)
+		
 		hero.className="hero_image";
 		 bullets.className = "none";
+		clearInterval(bullet)
 		}
 	}, 10);
   }
@@ -3647,78 +3645,82 @@ bullets.className = "bullet"
 
 	if(hero_a_pos==true){
 
-bullet = setInterval(function()
-{	if((bullets_x>=280)&&(bullets_y<=828)){
-	bullets_x = bullets_x - 0.5;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(hero_a_health_mer<2){		
-		//hero.className="hero_image_down ";
-		hero_a_mer.className="hero_a_image_down ";
-		hero_a_health_mer=0;
-		//hero.className="hero_image";
-		hero_a_pos=false;
-		sign_h_a.className="none";
-		clearInterval(bullet)
-		 bullets.className = "none";
-		 
-	}else{ 
+	bullet = setInterval(function()
+		{	if((bullets_x>=280)&&(bullets_y<=828)){
+				bullets_x = bullets_x - 0.5;
+				bullets_y = bullets_y + 10;	
+				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+			}else if(hero_a_health_mer<1){		
+				//hero.className="hero_image_down ";
+				hero_a_mer.className="hero_a_image_down ";
+				hero_a_health_mer=0;
+				//hero.className="hero_image";
+				hero_a_pos=false;
+				sign_h_a.className="none";
+				
+				 bullets.className = "none";
+		 		clearInterval(bullet)
+			}else{ 
 
-hero_a_health_mer=hero_a_health_mer-bandit_hit_b;
-		health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
-		clearInterval(bullet)
-		hero_a_mer	.className="hero_a_image";
-		 bullets.className = "none";
-		}
+				hero_a_health_mer=hero_a_health_mer-bandit_hit_b;
+				health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
+				
+				hero_a_mer	.className="hero_a_image";
+				bullets.className = "none";
+				clearInterval(bullet)
+			}
 	}, 10);
 
 
 }else if(hero_b_pos==true){   ///якщо є найомник 2
-bullet = setInterval(function()
-{	if((bullets_x<=370)&&(bullets_y<=828)){
-	bullets_x = bullets_x + 0.5;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(hero_b_health_mer<=2){		
-		//hero.className="hero_image_down ";
-		hero_b_mer.className="hero_b_image_down ";
-		hero_b_health_mer=0;
-		sign_h_b.className = "none";
-		//hero.className="hero_image";
-		hero_b_pos=false;
-		clearInterval(bullet)
-		 bullets.className = "none";
-		 
-	}else{ 
+	bullet = setInterval(function()
+		{	if((bullets_x<=370)&&(bullets_y<=828)){
+				bullets_x = bullets_x + 0.5;
+				bullets_y = bullets_y + 10;	
+				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+			}else if(hero_b_health_mer<1){		
+				//hero.className="hero_image_down ";
+				hero_b_mer.className="hero_b_image_down ";
+				hero_b_health_mer=0;
+				sign_h_b.className = "none";
+				//hero.className="hero_image";
+				hero_b_pos=false;
+				
+				bullets.className = "none";
+				clearInterval(bullet)
+			}else{ 
 
-hero_b_health_mer=hero_b_health_mer-bandit_hit_b;
-		health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
-		clearInterval(bullet)
-		hero_b_mer	.className="hero_b_image";
-		 bullets.className = "none";
-		}
+				hero_b_health_mer=hero_b_health_mer-bandit_hit_b;
+				health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
+				
+				hero_b_mer	.className="hero_b_image";
+				bullets.className = "none";
+				clearInterval(bullet)
+			}
 	}, 10);
 
 }else{
 		bullet = setInterval(function(){	
 			if((bullets_x<=320)&&(bullets_y<=880)){
-	bullets_x = bullets_x + 0.1;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(hero_health<1){		
-		hero.className="hero_image_down";
-		//hero.className="hero_image";
-		clearInterval(bullet)
-		 bullets.className = "none";
-	}else{ 
+				bullets_x = bullets_x + 0.1;
+				bullets_y = bullets_y + 10;	
+				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+			}else if(hero_health<1){		
+				hero.className="hero_image_down";
+				//hero.className="hero_image";
+				
+				bullets.className = "none";
+				clearInterval(bullet)
+			}else{ 
 
-		hero_health=hero_health-bandit_hit_b;
+				hero_health=hero_health-bandit_hit_b;
 		
-					health_sign_hero.style="width:"+hero_health+"px";
-		clearInterval(bullet)
-		hero.className="hero_image";
-		 bullets.className = "none";
-		}
+				health_sign_hero.style="width:"+hero_health+"px";
+				
+				hero.className="hero_image";
+				bullets.className = "none";
+				clearInterval(bullet)
+			}
 	}, 10);
   }
 }
@@ -3729,75 +3731,84 @@ bullets.className = "bullet"
 	bullets_y = 160;
 
 	if(hero_a_pos==true){
+		bullets_x = 355;
+		bullets_y = 160;
 bullet = setInterval(function()
 {	if((bullets_x>=280)&&(bullets_y<=828)){
-	bullets_x = bullets_x - 0.5;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(hero_a_health_mer<2){		
-		//hero.className="hero_image_down ";
-		hero_a_mer.className="hero_a_image_down ";
-		hero_a_health_mer=0;
-		//hero.className="hero_image";
-		hero_a_pos=false;
-		sign_h_a.className="none";
+			bullets_x = bullets_x - 0.5;
+			bullets_y = bullets_y + 10;	
+			bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+	}else if(hero_a_health_mer<1){		
+			//hero.className="hero_image_down ";
+			hero_a_mer.className="hero_a_image_down ";
+			hero_a_health_mer=0;
+			//hero.className="hero_image";
+			hero_a_pos=false;
+			sign_h_a.className="none";
 		
-		 bullets.className = "none";
-		 clearInterval(bullet)
+			bullets.className = "none";
+			clearInterval(bullet)
 	}else{ 
 
-hero_a_health_mer=hero_a_health_mer-bandit_hit_c;
-		health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
+			hero_a_health_mer = hero_a_health_mer - bandit_hit_c;
+			health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
 		
-		hero_a_mer	.className="hero_a_image";
-		 bullets.className = "none";
-		 clearInterval(bullet)
+			hero_a_mer	.className="hero_a_image";
+			bullets.className = "none";
+			clearInterval(bullet)
 		}
 	}, 10);
 
 } else if(hero_b_pos==true){   ///якщо є найомник 2
+	bullets_x = 355;
+	bullets_y = 160;
 bullet = setInterval(function()
-{	if((bullets_x<=370)&&(bullets_y<=828)){
-	bullets_x = bullets_x + 0.5;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(hero_b_health_mer<=2){		
-		//hero.className="hero_image_down ";
-		hero_b_mer.className="hero_b_image_down ";
-		hero_b_health_mer=0;
-		sign_h_b.className = "none";
-		//hero.className="hero_image";
-		hero_b_pos=false;
-		clearInterval(bullet)
-		 bullets.className = "none";
-		 
+{	if((bullets_x<=380)&&(bullets_y<=828)){
+			bullets_x = bullets_x + 0;
+			bullets_y = bullets_y + 10;	
+			bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+	}else if(hero_b_health_mer<=0){		
+			//hero.className="hero_image_down ";
+			hero_b_mer.className="hero_b_image_down ";
+			hero_b_health_mer=0;
+			sign_h_b.className = "none";
+			//hero.className="hero_image";
+			hero_b_pos=false;
+			
+			 bullets.className = "none";
+		 	clearInterval(bullet)
 	}else{ 
 
-hero_b_health_mer=hero_b_health_mer-bandit_hit_с;
-		health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
-		clearInterval(bullet)
-		hero_b_mer	.className="hero_b_image";
+	hero_b_health_mer = hero_b_health_mer-bandit_hit_c;
+		health_sign_b_hero.style="width:"+ hero_b_health_mer*hero_b_pers_tr+"px";
+		
+		hero_b_mer.className="hero_b_image";
 		 bullets.className = "none";
+		clearInterval(bullet)
 		}
 	}, 10);
 
 }else{
+	bullets_x = 355;
+	bullets_y = 160;
   	bullet = setInterval(function()
 {	if((bullets_x>=320)&&(bullets_y<=880)){
-	bullets_x = bullets_x - 0.5;
-	bullets_y = bullets_y + 10;	
-	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
+			bullets_x = bullets_x - 0.5;
+			bullets_y = bullets_y + 10;	
+			bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
 	}else if(hero_health<=1){		
-		hero.className="hero_image_down ";
-		//hero.className="hero_image";
-		clearInterval(bullet)
-		 bullets.className = "none";
+			hero.className="hero_image_down ";
+			//hero.className="hero_image";
+			
+			bullets.className = "none";
+			clearInterval(bullet)
 	}else{
-		hero_health=hero_health-bandit_hit_c;
+			hero_health=hero_health-bandit_hit_c;
 					health_sign_hero.style="width:"+hero_health+"px";
-		clearInterval(bullet)
-		hero.className="hero_image";
-		 bullets.className = "none";
+			
+			hero.className="hero_image";
+			bullets.className = "none";
+			clearInterval(bullet)
 		}
 	}, 10);
 
