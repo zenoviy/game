@@ -1,25 +1,38 @@
 body{
-	background: url(../img/548550_tekstura_staroy_bumagi_thumb.jpg) ;
+	/*/background: url(../img/548550_tekstura_staroy_bumagi_thumb.jpg) ;
 	background-size: 100%;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
+    background:#000;
 }	
 #main{
 	width:100%; 
 	height:20px; 
 	margin:0 auto; 
-	background-color: #965D44;
+	background-color: #3E2C28;
 	text-align:center;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	color: #f8f6da;
+	color: #ffe4ae;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #contract_wrap > button {
-    background-color: #e4b16b;
+    background-color: #905d19;
     border-radius: 5px;
     font-size: 16px;
-    border: 1px solid #c78f41;
+    border: 1px solid #b6741c;
+    color: #f3eee8;
+    cursor:pointer;
+
+}
+#contract_wrap > button:hover {
+    background-color: #e7a245;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #edd7bb;
+    color: #110e0b;
+    
 }
 #date{
 	 height: 100px;
@@ -34,12 +47,19 @@ body{
 	 background-color:#C71400;
 }
 .health_wrap{
-	background-color: #e4b97c;
+	background-color: #ecb061;
     height: 6px;
     margin: -23px 0 0 1130px;
     padding: 5px;
     position: absolute;
     width: 170px;
+}
+.health_title{
+    position: absolute;
+    margin: -25px 0 0 1010px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
 }
 .contracts{
 	float: left;
@@ -338,6 +358,7 @@ body{
     position: absolute;
     text-align: center;
     width: 650px;
+    font-family: Helvetica;
 }
 #enter_text{
 	width:100%;
@@ -349,7 +370,7 @@ body{
 .sh_li{
 	width: 750px;
 	height: auto;
-	background-color: #bbb;
+	background-color: #e3a140;
 	position: absolute;
 	margin: 15px 0 0 220px;
 	border-radius: 10px;
@@ -1167,7 +1188,7 @@ width: 161px;
     width: 190px;
 }
 .tbl1{
-	 background-color: #5057a3;
+	 background-color: #393e74;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: #fff;
@@ -1195,7 +1216,7 @@ width: 161px;
 .tbl3{
 	width:100%; 
 	height:40px; 
-	background-color:#59A346;
+	background-color:#8C2611;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	color: #fff;
@@ -1209,7 +1230,7 @@ width: 161px;
 .tbl4{
 	width:100%; 
 	height:40px; 
-	background-color:#9EA380;
+	background-color:#474D29;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	color: #fff;
@@ -1268,7 +1289,7 @@ width: 161px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     float: left;
     height: 50px;
-    margin: 3px;
+    margin: 6px;
     width: 50px;
     border-radius:5px;
 }
@@ -1283,7 +1304,7 @@ width: 161px;
 	width:200px;
 	height:550px;
 	margin:0 auto;
-	background-color:#bbb;
+	background-color:#9c8673;
 	position: relative;
 	float: right;
 }
@@ -1385,7 +1406,7 @@ width: 161px;
 	background-position: center;
 }
 .mt_img{
-	background-image: url(../img/icon/meet.png);
+	background-image: url(../img/icon/meat.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	display: block;
@@ -1423,7 +1444,7 @@ width: 161px;
 	background-position: center;
 	width:40px;
 	height:40px;
-	margin: 5px 20px 0 auto;
+	margin: 0 20px 0 auto;
 }
 .wag2_img{
 	background-image: url(../img/icon/diligence_b.png);
@@ -1433,7 +1454,7 @@ width: 161px;
 	background-position: center;
 	width:40px;
 	height:40px;
-	margin: 5px 20px 0 auto;
+	margin: 0 20px 0 auto;
 }
 .wag3_img{
 	background-image: url(../img/icon/diligence_c.png);
@@ -1443,17 +1464,55 @@ width: 161px;
 	background-position: center;
 	width:40px;
 	height:40px;
-	margin: 5px 20px 0 auto;
+	margin: 0 20px 0 auto;
 }
 .sp_wr {
-   background-color: #9b9493;
+   background-color: #865934;
     color: #fff;
     font-weight: bold;
+    font-family: Helvetica;
     height: 40px;
     margin-bottom: -15px;
 }
+.sp_wr_prison {
+    background-image: url(../img/wanted.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+   /*background-color: #b06d35;*/
+    margin: 0 auto;
+    color: #fff;
+    font-weight: bold;
+    font-family: Helvetica;
+    height: 350px;
+    width: 280px;
+    /*margin-bottom: -15px;*/
+}
+
+.winted_face{
+    background-image: url(../img/wanted_band_a.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.winted_face_b{
+    background-image: url(../img/wanted_band_b.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.wanted_take{
+    width:100%;
+    height:350px;
+    cursor:pointer;
+}
 .test{
-	 background-color: #806F6C;
+	 background-color: #502E28;
     float: left;
     height: 90px;
     margin: 460px 0 0;
@@ -1627,9 +1686,10 @@ width: 161px;
 }
 .invent{
 	 height: auto;
-    margin: 20px;
+    margin: 20px 0 0 5px;
     position: absolute;
     width: 100%;
+    color: #fff;
 }
 /*__________________battle______________*/
 .battlefield_doyle{       										/*7*/
@@ -1718,7 +1778,7 @@ width: 161px;
     background-size: 100% auto;
     display: block;
     height: 120px;
-    margin: 255px 20px 0 828px;
+    margin: 255px 20px 0 808px;
     position: absolute;
     width: 50px;
 }
@@ -1729,7 +1789,7 @@ width: 161px;
     background-size: 100% auto;
     display: block;
     height: 120px;
-    margin: 255px 20px 0 828px;
+    margin: 255px 20px 0 808px;
     position: absolute;
     width: 64px;
 }

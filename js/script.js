@@ -2,13 +2,16 @@ var a=5;
 var b=0;
 var c=0;
 var inv = 0;
-var money_default=50000;
+var money_default=50;
 var money_cash= money_default;
+var dy=1;
 
 var travel_rand_city = 0;
 var travel_rand_numb = 1;
 
 var traveler_check=true;
+var battleStatus = false;
+
 
 var ya=1002;
 var xa=111;
@@ -132,7 +135,7 @@ if(inv ==0){
 function baner_alert(){
 if(money_cash<itm_pl){
 	alert_bnr.className="alert_ok";
-	enter_text_baner.innerHTML="НЕДОСТАТНЬО КОШТІВ!";
+	enter_text_baner.innerHTML="YOU DONT HAVE ENOUGHT MONEY!";
 	glass.className="glass";
 	btn_ok_alert.onclick = function(){
 		alert_bnr.className="none";
@@ -144,7 +147,7 @@ if(money_cash<itm_pl){
 function baner_alert_st(){
 
 	alert_bnr.className="alert_ok";
-	enter_text_baner.innerHTML="НЕДОСТАТНЬО КОШТІВ!";
+	enter_text_baner.innerHTML="YOU DONT HAVE ENOUGHT MONEY!";
 	glass.className="glass";
 	btn_ok_alert.onclick = function(){
 		alert_bnr.className="none";
@@ -154,7 +157,7 @@ function baner_alert_st(){
 function baner_alert_c(){
 
 	alert_bnr.className="alert_ok";
-	enter_text_baner.innerHTML="ВИ НЕ МОЖЕТЕ ПОКИЩО ЦЕ ПРИДБАТ!";
+	enter_text_baner.innerHTML="YOU CAN NOT AFFORD IT YET!";
 	glass.className="glass";
 	btn_ok_alert.onclick = function(){
 		alert_bnr.className="none";
@@ -163,7 +166,7 @@ function baner_alert_c(){
 function baner_alert_c1(){
 
 	alert_bnr.className="alert_ok";
-	enter_text_baner.innerHTML="ВИ ЦЕ ВЖЕ ПРИДБАЛИ!";
+	enter_text_baner.innerHTML="YOU ALREADY BOUGHT IT!";
 	glass.className="glass";
 	btn_ok_alert.onclick = function(){
 		alert_bnr.className="none";
@@ -172,7 +175,7 @@ function baner_alert_c1(){
 function baner_stop(){
 
 	alert_bnr.className="alert_ok";
-	enter_text_baner.innerHTML="МАКСИМАЛЬНА ВМІСТИМІСТЬ ЯЧЕЙОК!";
+	enter_text_baner.innerHTML="MAXIMUM INVENTORY CAPACITY!";
 	glass.className="glass";
 	btn_ok_alert.onclick = function(){
 		alert_bnr.className="none";
@@ -212,7 +215,7 @@ function numb(){										/////////// ДОДАВАННЯ ГРОШЕЙ
 				  	//cnt_plus()
 
 				}}}else 
-				alert("максимум заповнених ячеєк");
+				alert("MAXIMUM INVENTORY CAPACITY!");
 }
 														////////рандомізатор магазину
 var random;
@@ -232,7 +235,7 @@ var	ammo_sh_by = 0;
 var	brad_sh_by = 0;
 var	gold_sh_by = 0;
 var	dynamite_sh_by = 0;
-var	meet_sh_by = 0;
+var	meat_sh_by = 0;
 var	rope_sh_by = 0;
 var	pickaxe_sh_by = 0;
 
@@ -241,7 +244,7 @@ var	ammo_sh_sl = 0;
 var	brad_sh_sl = 0;
 var	gold_sh_sl = 0;
 var	dynamite_sh_sl = 0;
-var	meet_sh_sl = 0;
+var	meat_sh_sl = 0;
 var	rope_sh_sl = 0;
 var	pickaxe_sh_sl = 0;
 
@@ -251,7 +254,7 @@ function clear_list(){
 	brad_sh_by = 0;
 	gold_sh_by = 0;
 	dynamite_sh_by = 0;
-	meet_sh_by = 0;
+	meat_sh_by = 0;
 	rope_sh_by = 0;
 	pickaxe_sh_by = 0;
 }
@@ -399,9 +402,9 @@ random =  Math.floor(Math.random() * 100 + 1);
 						dynamite_sh_by=(Math.floor(dynamite_sh_by));
 					//	dynamite_sh_by=dynamite_sh_by+random;
 random =  Math.floor(Math.random() * 100 + 1);
-		meet_sh_by = meet_min+(meet_min/100)*random;
-						meet_sh_by=(Math.floor(meet_sh_by));
-					//	meet_sh_by=meet_sh_by+random;
+		meat_sh_by = meet_min+(meet_min/100)*random;
+						meat_sh_by=(Math.floor(meat_sh_by));
+					//	meat_sh_by=meat_sh_by+random;
 random =  Math.floor(Math.random() * 100 + 1);
 		rope_sh_by = rope_min+(rope_min/100)*random;
 						rope_sh_by=(Math.floor(rope_sh_by));
@@ -435,9 +438,9 @@ function rand_price_sl(){
 		dynamite_sh_sl=(Math.floor(dynamite_sh_sl));
 		dynamite_sh_sl=dynamite_sh_by-dynamite_sh_sl
 	
-	meet_sh_sl = (meet_sh_by/100)*30;
-		meet_sh_sl=(Math.floor(meet_sh_sl));
-		meet_sh_sl=meet_sh_by-meet_sh_sl
+	meat_sh_sl = (meat_sh_by/100)*30;
+		meat_sh_sl=(Math.floor(meat_sh_sl));
+		meat_sh_sl=meat_sh_by-meat_sh_sl
 	
 	rope_sh_sl = (rope_sh_by/100)*30;
 		rope_sh_sl=(Math.floor(rope_sh_sl));
@@ -629,7 +632,7 @@ function numb_dm(){
 					  }
 function numb_mt(){
 	transfer= items[6];
-		itm_pl = meet_sh_by;
+		itm_pl = meat_sh_by;
   		if(money_cash>=itm_pl){
   		cnt_plus()
   		ad_class()
@@ -645,7 +648,7 @@ function numb_mt(){
 						i=0;
 						if(rez6.length>=1){
 						transfer= items[6];
-							itm_mn = meet_sh_sl;
+							itm_mn = meat_sh_sl;
 							coin = rez6;
 					      mns_numb()
   						cnt_minus()
@@ -739,7 +742,7 @@ var hearing_status=true;
 var gangs_threat=true;
 
 
-var want_word = " хоче ";
+var want_word = " want ";
 var traveler_transfer = 0;
 var traveler_price_transfer = 0;
 var traveler_price = 200;
@@ -774,9 +777,9 @@ if(m<=3){
 	traveler_price = Math.floor(Math.random() * 260 + 1);
 	travel_rand_numb= Math.floor(Math.random() * 4 + 1);
 	if (travel_rand_numb ==1){
-		want_word =" хоче ";
+		want_word =" wants ";
 	} else{
-		want_word =" хочуть ";
+		want_word =" want ";
 	}
 }else if((m<=6) && (m>3)){
 	traveler_price = Math.floor(Math.random() * 260 + 1);
@@ -929,6 +932,8 @@ var merc_price_trans = 0;
 
 var hero_a_pers_tr = 0;
 var hero_b_pers_tr = 0;
+var time_hero_a_days = 0;
+var time_hero_b_days = 0;
 
 function sln2(){
 	//nerc_a_rend()
@@ -964,14 +969,20 @@ if(money_default>=merc_price_trans){
 				hero_a_health_trans=hero_a_health_mer*hero_a_pers_tr;
 				hero_a_hls_trans=hero_a_health_mer;
 
-
+					health_sign_a_hero.style="width:50px";
 							money_default=money_default-merc_price_trans;	
 								money.innerHTML =money_default + " $";
 					money_cash= money_default;	
 					hero_a_hit=mrc_hit;
-				  /*	
-				 	time_hero_a=mrc_time_rand+m;
-				  		*/
+				  /*	*/
+				 	time_hero_a = mrc_time_rand+m;
+				 	if(dy > 28){
+				 		time_hero_a_days = 30;
+				 	}else{
+				 			
+				 		 time_hero_a_days = dy;
+				 	}
+				  	
 						//mrc_cost
 				  		merccnt=1;
 				  		ask_bnr.className="none";
@@ -987,6 +998,15 @@ if(money_default>=merc_price_trans){
 							hero_b_pers_tr=(50/hero_b_health_mer);
 							hero_b_health_trans=hero_b_health_mer*hero_b_pers_tr;
 							hero_b_hls_trans=hero_b_health_mer;
+							time_hero_b=mrc_time_rand+m;
+							health_sign_b_hero.style="width:50px";
+							if(dy > 28){
+				 		time_hero_b_days = 30;
+				 	}else{
+				 		 time_hero_b_days = dy;
+				 	}
+				 //	time_hero_b_days = dy;
+				 time_hero_b_days = 54;
 							money_default=money_default-merc_price_trans;	
 								money.innerHTML =money_default + " $";
 					money_cash= money_default;	
@@ -1038,17 +1058,17 @@ function sln3(){
 	btn_no_ask.className="btn_m_ask";
 
 	if(traveler_check==false){
-						enter_text_ask.innerHTML="Ви вже набрали мандрівників";
+						enter_text_ask.innerHTML="You already take a travelers";
 						btn_yes_ask.className="none";
 						btn_no_ask.innerHTML="Yes";
 	}else if((travel_rand_city==a) || (travel_rand_city>city_name_list.length)){
-		enter_text_ask.innerHTML="Зараз немає бажаючих подорожувати, завітайте наступного разу";
+		enter_text_ask.innerHTML="Right now there are no travelers";
 		btn_yes_ask.className="none";
 		btn_no_ask.innerHTML="Yes";
 	glass.className="glass";
 	empty()
 			}else{
-				enter_text_ask.innerHTML=" "+travel_rand_numb+" з наших людей"+ want_word +"відправитись в "+city_name_list[travel_rand_city-1]+" за "+traveler_price*travel_rand_numb+" $.";
+				enter_text_ask.innerHTML=" "+travel_rand_numb+" of our people"+ want_word +"travel to "+city_name_list[travel_rand_city-1]+" they pay "+traveler_price*travel_rand_numb+" $.";
 					btn_yes_ask.className="btn_m_ask";
 		//traveler()
 		empty()
@@ -1071,11 +1091,11 @@ function sln3(){
 									glass.className="none";
 							}
 						}else {
-							alert("недостатньо місць");
+							alert("MAXIMUM INVENTORY CAPACITY!");
 							/*ask_bnr.className="none";		
 									glass.className="none";*/
 						}
-					  }else alert("недостатньо місць");
+					  }else alert("MAXIMUM INVENTORY CAPACITY!");
 					}
 				btn_no_ask.onclick = function(){
 					ask_bnr.className="none";
@@ -1096,7 +1116,7 @@ function trav_eres(){
 	money.innerHTML = money_default + "$";
 	money_cash=money_default;
 	traveler_check = true;
-	alert("з прибуттям");
+	alert("You successfully deliver passengers");
 	btn_yes_ask.className="btn_m_ask";
 	btn_no_ask.innerHTML="No";
 	trav=travel_rand_city;
@@ -1131,11 +1151,11 @@ if(package == true){
 				packege_random()
 				sln4()
 	}else {
-			enter_text_ask.innerHTML="відвезти пакунок в "+city_name_list[package_twn-1]+" за "+package_price+"$";
+			enter_text_ask.innerHTML="Deliver package to "+city_name_list[package_twn-1]+" for "+package_price+"$";
 
 		}	
 	}else{
-	 	enter_text_ask.innerHTML="ви вже взяли пакунок";
+	 	enter_text_ask.innerHTML="You already take a packege";
 	 	btn_yes_ask.className="none";
 		btn_no_ask.innerHTML="Yes";
 	}
@@ -1149,7 +1169,7 @@ if(package == true){
 			package_price_transfer=package_price;
 			package_twn_transfer=package_twn;
 		}else {
-			enter_text_ask.innerHTML="ви вже взяли пакунок";
+			enter_text_ask.innerHTML="You already take a packege";
 			glass.className="none";
 			ask_bnr.className="none";
 		}
@@ -1168,7 +1188,7 @@ function packege_minus(){
 						transfer= items[10];
 							coin = rez_package;	
   						cnt_minus()
-					 	alert("доставлено")
+					 	alert("The package is deliver")
 					 	package = true;
 					 	rez_package=[];
 					 	money_cash = package_price_transfer;
@@ -1182,7 +1202,7 @@ function packege_minus(){
 
 function stbl_6(){											///////6 СЛОТІВ
 if(inv >0){
-	return alert("це вже куплено");
+	return alert("You already bought it");
 }	
 	else if((inv==0) & (money_default>=1200))
 	{	
@@ -1200,7 +1220,7 @@ if(inv >0){
 		return money_default;
 	} else if((inv==0) & (money_default<=1500)){
 		//baner_alert_st()
-		alert("недостатньо коштів");
+		alert("You dont have enought money");
 	} else if(inv==1)
 		baner_alert_c1()
 }
@@ -1225,7 +1245,7 @@ function stbl_12(){										 /////////12 СЛОТІВ
 		return money_default;
 	} else if ((inv==1) & (money_default<=2600)){
 		//baner_alert_st()
-		alert("недостатньо коштів");
+		alert("You dont have enought money");
 	}else if (inv==2)
 		baner_alert_c1()
 }
@@ -1248,7 +1268,7 @@ function stbl_16(){										 /////////16 СЛОТІВ
 		return money_default;
 	} else if ((inv==2) & (money_default<=10000)){
 		//baner_alert_st()
-		alert("недостатньо коштів");
+		alert("You dont have enought money");
 	}else if (inv==3)
 		baner_alert_c()
 }
@@ -1264,8 +1284,8 @@ gun_tipe=1;
 		money_cash=money_default;
 		money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=1){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 function gun_c(){
 	if((money_default>=1000)&&(gun_tipe<=1)){
@@ -1276,8 +1296,8 @@ gun_tipe=2;
 		money_cash=money_default;
 		money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=2){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 function gun_d(){
 	if((money_default>=2000)&&(gun_tipe<=2)){
@@ -1288,8 +1308,8 @@ gun_tipe=3;
 		money_cash=money_default;
 		money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=3){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 function gun_e(){
 	if((money_default>=3200)&&(gun_tipe<=3)){
@@ -1300,8 +1320,8 @@ gun_tipe=4;
 		money_cash=money_default;
 		money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=4){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 function gun_f(){
 	if((money_default>=5500)&&(gun_tipe<=4)){
@@ -1312,8 +1332,8 @@ gun_tipe=5;
 	money_cash=money_default;
 	money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=5){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 function gun_g(){
 	if((money_default>=7000)&&(gun_tipe<=5)){
@@ -1324,8 +1344,8 @@ gun_tipe=6;
 	money_cash=money_default;
 	money.innerHTML =money_default + " $";
 	}else if(gun_tipe>=6){
-		alert("це вже куплено");
-	}else alert("недостатньо коштів");
+		alert("You already bought it");
+	}else alert("You dont have enought money");
 }
 
 
@@ -1347,21 +1367,45 @@ doyle.innerHTML=""
 bridgeport.innerHTML=""
 
 }
-function stbl(){
-//stable.innerHTML="stable"
+
+var jail_random = 0;                                                  	////// JAIL
+var jail_city_random = 0;
+var jail_city_random_trans = 0;
+var jail_chek = false;	
+var revard = 0;
+var revard_transfer = 0;
+
+function jail_rand(){
+jail_random	= Math.floor(Math.random() * 2 + 1);
+jail_city_random	= Math.floor(Math.random() * 8 + 1);
+revard	= Math.floor(Math.random() * 5000 + 1);
 }
-function pris(){
-//prison.innerHTML="prison"
+
+function wanted_poster(){
+	if(jail_chek == false){
+		if(jail_random == 1){
+			wanted_face.className = "winted_face";
+				jail_city_random_trans = jail_city_random;
+				revard_transfer = revard;
+		}else if(jail_random == 2){
+			wanted_face.className = "winted_face_b";
+				jail_city_random_trans = jail_city_random;
+				revard_transfer = revard;
+		}
+	}
 }
-function sln(){
-//saloon.innerHTML="saloon"
+	
+
+function prison_wanted(){
+	if(jail_chek == false){
+
+	alert("bandit");
+	jail_chek = true;
+	wanted_face.innerHTML="You already take a jobe";
+	}
 }
-function shp(){
-//shop.innerHTML="shop"
-}
-function gns(){
-//guns.innerHTML="guns"
-}
+
+
 var city_name_list =["Reno","Virginia City", "Carson City", "Redwood", "Silver Springs", "Westwood", "Doyle", "Bridgeport" ];
 /*
 function reno_hvr(){
@@ -1417,11 +1461,14 @@ window.onload=function(){
 
 	var bullets = document.getElementById("bullets")
 
+	var wanted_face = document.getElementById("wanted_face")
+
 	var wrn =document.getElementById("wrn")
 	var contracts = document.getElementById("active_contracts")
 
 	var money = document.getElementById("money")
 
+	var health_title = document.getElementById('health_title')
 	var str = document.getElementById('story')
 	var main = document.getElementById('main')
 	var reno = document.getElementById("reno")
@@ -1530,7 +1577,7 @@ test_btn.onclick=function(){
 	//alert(bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|"+bandit_cnt_a+"<bandit_cnt_a|"+bandit_cnt_b+"<bandit_cnt_b|"+bandit_cnt_a+"<bandit_cnt_c|"+bandit_shooting+"<bandit_shooting|"+bandit_hit_a+"<bandit_hit_a|"+bandit_hit_b+"<bandit_hit_b|"+bandit_hit_c+"<bandit_hit_c|"+bandit_shooting+"<bandit_shooting|");
 	//alert( hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+hero_b_heals+"<hero_b_heals|"+hero_a_hit+"<hero_a_hit|"+hero_b_hit+"<hero_b_hit|");
 	//alert( hit_a+''+hit_b+''+hit_c+"<hit_a,b,c|"+hit+"<hit|"+hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|");
-	alert(bullets_x+"<bullets_x|"+bullets_y+"<bullets_y|");
+	alert(battle+"<battle|"+bullets_x+"<bullets_x|"+bullets_y+"<bullets_y|"+jail_random+"<jail_random|"+time_hero_a_days+"<time_hero_a_days|"+dy+"<dy|"+time_hero_a+"<time_hero_a|");
 }
 
 contracts.onclick = function(){
@@ -1541,14 +1588,26 @@ function active_contracts(){
 	baner.className="ok";
 	no.className="none";
 	ok.className="btn_m1";
-if ((traveler_check==false) && (package == false)){
-				enter_text.innerHTML="Контракт на доставку пасажирів "+city_name_list[trav-1]+"<br>Контракт на доставку посилки в "+city_name_list[package_twn_transfer-1];
+
+	if((traveler_check==false) && (package == false) && (jail_chek==true)){
+			enter_text.innerHTML="Passengers delivery contract in "+city_name_list[trav-1]+"<br>package delivery contract in "+city_name_list[package_twn_transfer-1]+" + bandit";
+
+	}else if ((traveler_check==false) && (package == false)){
+				enter_text.innerHTML="Passengers delivery contract in "+city_name_list[trav-1]+"<br>package delivery contract in "+city_name_list[package_twn_transfer-1];
 	}else if(traveler_check==false){
-			enter_text.innerHTML="Контракт на доставку пасажирів "+city_name_list[trav-1]; //trav
+			enter_text.innerHTML="Passengers delivery contract in "+city_name_list[trav-1]; 
+					if(jail_chek==true){
+							enter_text.innerHTML="Passengers delivery contract in "+city_name_list[trav-1]+" + bandit"; 
+					}//trav
 		}else if (package == false) {
-			enter_text.innerHTML="<br>Контракт на доставку посилки в "+city_name_list[package_twn_transfer-1];
+			enter_text.innerHTML="<br>package delivery contract in "+city_name_list[package_twn_transfer-1];
+						if(jail_chek==true){
+							enter_text.innerHTML="<br>package delivery contract in "+city_name_list[package_twn_transfer-1]+" + bandit"; 
+					}
+}else if(jail_chek==true){
+	enter_text.innerHTML=" bandits ";
 		}else 
-			enter_text.innerHTML="немає активних контрактів";
+			enter_text.innerHTML="No active contracts at this time";
 	ok.onclick=function(){
 		baner.className="none";
 		ok.className="btn_m";
@@ -1718,54 +1777,55 @@ function tbl(){
 		li_cont.className="li_content";///////////
 		no_sh.className="none";
 		 li_cont.innerHTML="&nbsp;<br>"
-					+"<div class='sp_wr'><div class='wag1_img wrp'></div>6 ячейок 1500$"+ "<button onclick='stbl_6()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='wag2_img wrp'></div>12 ячейок 5500$"+ "<button onclick='stbl_12()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='wag3_img wrp'></div>16 ячейок 10000$"+ "<button onclick='stbl_16()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='wag1_img wrp'></div>Cart        6 seats     1500$"+ "<button onclick='stbl_6()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='wag2_img wrp'></div>Diligences  12 seats    5500$"+ "<button onclick='stbl_12()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='wag3_img wrp'></div>Diligences  16 seats    10000$"+ "<button onclick='stbl_16()' class='plus'>+</button></div><br>"
 					
 					
 	}
 		else if(c==2){
+			
 			li_cont.className="li_content";
 			no_sh.className="none";
 			 li_cont.innerHTML="&nbsp; <br>"
-				    +"<div class='sp_wr'>розшук"+ "<button onclick='' class='plus'>+</button><button onclick='' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'>переправка"+ "<button onclick='' class='plus'>+</button><button onclick='' class='plus'>-</button></div><br>";
-					
+			 +"<div class='sp_wr_prison'>"+ "<div onclick='prison_wanted()' class='wanted_take'><div id='wanted_face' class='none'></div></div></div><br>";
+				//	+"<div class='sp_wr'>переправка"+ "<button onclick='' class='plus'>+</button><button onclick='' class='plus'>-</button></div><br>";
+			wanted_poster()		
 
 		}
 			else if(c==3){
 				li_cont.className="li_content";
 				no_sh.className="none";
 				li_cont.innerHTML="&nbsp;<br>"
-					+"<div class='sp_wr'><div class='barman_img wrp'></div>новини"+ "<button onclick='sln_a()' class='plus'>></button></div><br>"
-					+"<div class='sp_wr'><div class='doctor_img wrp'></div>лікар"+ "<button onclick='sln1()' class='plus'>></button></div><br>"
-					+"<div class='sp_wr'><div class='shooter_img wrp'></div>найняти стрілка"+ "<button onclick='sln2()' class='plus'>></button></div><br>"
-					+"<div class='sp_wr'><div class='traveler_img wrp'></div>перевезення пасажирів"+ "<button onclick='sln3()' class='plus'>></button></div><br>"+
-					"<div class='sp_wr'><div class='deliver_img wrp'></div>відвезти посилку"+ "<button onclick='sln4()' class='plus'>></button></div><br>";		
+					+"<div class='sp_wr'><div class='barman_img wrp'></div>News"+ "<button onclick='sln_a()' class='plus'>></button></div><br>"
+					+"<div class='sp_wr'><div class='doctor_img wrp'></div>Doctor"+ "<button onclick='sln1()' class='plus'>></button></div><br>"
+					+"<div class='sp_wr'><div class='shooter_img wrp'></div>Hire rifleman"+ "<button onclick='sln2()' class='plus'>></button></div><br>"
+					+"<div class='sp_wr'><div class='traveler_img wrp'></div>Passengers delivery"+ "<button onclick='sln3()' class='plus'>></button></div><br>"+
+					"<div class='sp_wr'><div class='deliver_img wrp'></div>Packege delivery"+ "<button onclick='sln4()' class='plus'>></button></div><br>";		
 			}
 				else if(c==4){
 					li_cont.className="li_content";
 					no_sh.className="none";
-					li_cont.innerHTML="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BUY &nbsp;  &nbsp; SEL<br>"
-					+"<div class='sp_wr'><div class='dr_img wrp'></div>випивка &nbsp;"+ whisky_sh_by+"$  &nbsp; &nbsp; "+ whisky_sh_sl+"$"+ "<button onclick='numb_def()' class='plus'>+</button><button onclick='pl_numb_def()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='bl_img wrp'></div>патрони &nbsp;"+ ammo_sh_by +"$ &nbsp; &nbsp; "+ ammo_sh_sl+"$"+ "<button onclick='numb_bl()' class='plus'>+</button><button onclick='pl_numb_bl()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='br_img wrp'></div>хліб  &nbsp;"+brad_sh_by+"$  &nbsp; &nbsp; "+ brad_sh_sl+"$"+ "<button onclick='numb_br()' class='plus'>+</button><button onclick='pl_numb_br()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='gld_img wrp'></div>золото &nbsp;"+gold_sh_by+"$  &nbsp; &nbsp; "+ gold_sh_sl+"$"+ "<button onclick='numb_gld()' class='plus'>+</button><button onclick='pl_numb_gld()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='dm_img wrp'></div>динаміт &nbsp;"+dynamite_sh_by+"$  &nbsp; &nbsp; "+ dynamite_sh_sl+"$"+ "<button onclick='numb_dm()' class='plus'>+</button><button onclick='pl_numb_dm()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='mt_img wrp'></div>м'ясо &nbsp;"+meet_sh_by+"$  &nbsp; &nbsp; "+ meet_sh_sl+"$"+ "<button onclick='numb_mt()' class='plus'>+</button><button onclick='pl_numb_mt()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='rp_img wrp'></div>шнур &nbsp;"+rope_sh_by+"$  &nbsp; &nbsp; "+ rope_sh_sl+"$"+ "<button onclick='numb_rp()' class='plus'>+</button><button onclick='pl_numb_rp()' class='plus'>-</button></div><br>"
-					+"<div class='sp_wr'><div class='tl_img wrp'></div>інструменти &nbsp;"+pickaxe_sh_by+"$  &nbsp; &nbsp; "+ pickaxe_sh_sl+"$"+ "<button onclick='numb_tl()' class='plus'>+</button><button onclick='pl_numb_tl()' class='plus'>-</button></div><br>";
+					li_cont.innerHTML="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; BUY &nbsp;  &nbsp; SEL<br>"
+					+"<div class='sp_wr'><div class='dr_img wrp'></div>Whiskey &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ whisky_sh_by+"$  &nbsp; &nbsp; "+ whisky_sh_sl+"$"+ "<button onclick='numb_def()' class='plus'>+</button><button onclick='pl_numb_def()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='bl_img wrp'></div>Ammo &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ ammo_sh_by +"$ &nbsp; &nbsp; "+ ammo_sh_sl+"$"+ "<button onclick='numb_bl()' class='plus'>+</button><button onclick='pl_numb_bl()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='br_img wrp'></div>Bread  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;	"+brad_sh_by+"$  &nbsp; &nbsp; "+ brad_sh_sl+"$"+ "<button onclick='numb_br()' class='plus'>+</button><button onclick='pl_numb_br()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='gld_img wrp'></div>Gold &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+gold_sh_by+"$  &nbsp; &nbsp; "+ gold_sh_sl+"$"+ "<button onclick='numb_gld()' class='plus'>+</button><button onclick='pl_numb_gld()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='dm_img wrp'></div>Вynamite &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+dynamite_sh_by+"$  &nbsp; &nbsp; "+ dynamite_sh_sl+"$"+ "<button onclick='numb_dm()' class='plus'>+</button><button onclick='pl_numb_dm()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='mt_img wrp'></div>Meat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+meat_sh_by+"$  &nbsp; &nbsp; "+ meat_sh_sl+"$"+ "<button onclick='numb_mt()' class='plus'>+</button><button onclick='pl_numb_mt()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='rp_img wrp'></div>Rope &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rope_sh_by+"$  &nbsp; &nbsp; "+ rope_sh_sl+"$"+ "<button onclick='numb_rp()' class='plus'>+</button><button onclick='pl_numb_rp()' class='plus'>-</button></div><br>"
+					+"<div class='sp_wr'><div class='tl_img wrp'></div>Tools &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+pickaxe_sh_by+"$  &nbsp; &nbsp; "+ pickaxe_sh_sl+"$"+ "<button onclick='numb_tl()' class='plus'>+</button><button onclick='pl_numb_tl()' class='plus'>-</button></div><br>";
 				}
 					else if(c==5){
 						li_cont.innerHTML="guns";
 						no_sh.className="none";
 						 li_cont.innerHTML="&nbsp; <br>"
-				   +"<div class='sp_wr'><div class='gun_b wrp'></div>gun1 &nbsp; 500 $;"+ "<button onclick='gun_b()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='gun_c wrp'></div>gun2 &nbsp; 1000 $"+ "<button onclick='gun_c()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='gun_d wrp'></div>gun3 &nbsp; 2000 $ "+ "<button onclick='gun_d()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='gun_e wrp'></div>dhootgun; 3200 $"+ "<button onclick='gun_e()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='gun_f wrp'></div>sniper rifle; 5500 $ "+ "<button onclick='gun_f()' class='plus'>+</button></div><br>"
-					+"<div class='sp_wr'><div class='gun_g wrp'></div>mashinegun; &nbsp; 7000 $ "+ "<button onclick='gun_g()' class='plus'>+</button></div><br>";
+				   +"<div class='sp_wr'><div class='gun_b wrp'></div>Smith&Wesson &nbsp; &nbsp; 500 $;"+ "<button onclick='gun_b()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='gun_c wrp'></div>colt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1000 $"+ "<button onclick='gun_c()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='gun_d wrp'></div>Colts &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2000 $ "+ "<button onclick='gun_d()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='gun_e wrp'></div>Shootgun &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3200 $"+ "<button onclick='gun_e()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='gun_f wrp'></div>Sniper rifle &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5500 $ "+ "<button onclick='gun_f()' class='plus'>+</button></div><br>"
+					+"<div class='sp_wr'><div class='gun_g wrp'></div>Mashinegun &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  7000 $ "+ "<button onclick='gun_g()' class='plus'>+</button></div><br>";
 					}
 }
 
@@ -1774,6 +1834,7 @@ function start(){
 	str.className="none";
 	spc.className="inv_wrap";
 	contract_wrap.className="contracts";
+	health_title.className = "health_title";
 
 	
 if(inv==0){
@@ -1799,7 +1860,7 @@ if(inv==0){
 btn_ok.onclick = function(){
 	
 	traveler_random()
-
+		jail_rand()
 		merc_a_rend()	
 		packege_random()
 		trav_eres()
@@ -2158,7 +2219,7 @@ ok.onclick=function(){
 }
 
 //var m = 1;
-var dy=1;
+
 var time_dy =0;
 
 var day_count = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 30];
@@ -2268,14 +2329,17 @@ if(a==1){
 }
 //////////////////////////////////move and randome
 function merciner_time(){
-	if((m=time_hero_a)&&(hero_a_pos=true)){
+	if((m>=time_hero_a)&&(hero_a_pos==true)&&(dy>=time_hero_a_days)){
 		//time_hero_a
 		hero_a_pos=false;
-		alert(1);
+		//hero_a_mer.className="none";
+		alert("Shooter A contract is over");
 	}
 
-	if((m=time_hero_b)&&(hero_b_pos=true)){
+	if((m>=time_hero_b)&&(hero_b_pos==true)&&(dy>=time_hero_b_days)){
 		hero_b_pos=false;
+		//ero_b_mer.className="none";
+		alert("Shooter B contract is over");
 	}
 	//time_hero_a=mrc_time_rand;
 }
@@ -2307,8 +2371,9 @@ function move(){
 			}
 				merc_a_rend()
 				marciner_city()
+				jail_rand()
 					packege_random()
-					//merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2346,8 +2411,9 @@ function move(){
 			}
 				merc_a_rend()
 				marciner_city()
+				jail_rand()
 					packege_random()
-				//	merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2385,8 +2451,9 @@ function move(){
 			}	
 				merc_a_rend()
 				marciner_city()
+				jail_rand()
 					packege_random()
-				//	merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2434,8 +2501,9 @@ function move(){
 			}	
 			merc_a_rend()
 			marciner_city()
+			jail_rand()
 					packege_random()
-				//	merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2474,8 +2542,9 @@ function move(){
 			}		
 				merc_a_rend()
 				marciner_city()
+				jail_rand()
 					packege_random()
-				//	merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2509,12 +2578,12 @@ function move(){
 					hear_city_transfer = hearings_city;
 					hear_type_transfer = hearings_type;
 						}
-
 			}
 				merc_a_rend()
 				marciner_city()
+				jail_rand()
 					packege_random()
-				//	merciner_time()
+					merciner_time()
 					traveler_random()
 						clear_list()
 						shop_random()
@@ -2567,6 +2636,13 @@ function move(){
 	}
 
 }
+glass.onclick = function(){
+	if(battleStatus === false){
+	glass.className="none";
+	clearInterval(move_scr)
+	}
+
+}
 
 /*________________________________________battle_______________________________________________*/
 
@@ -2590,7 +2666,7 @@ var bandit_a_health_transfer = 50;
 var bandit_b_health_transfer= 50;
 var bandit_c_health_transfer = 50;
 
-
+var banditsNumderAlert = 0;
 
 var hit = 0;
 
@@ -2616,6 +2692,9 @@ function battle_random_time(){
 	bandit_cnt_a= Math.floor(Math.random()*5);
 	bandit_cnt_b= Math.floor(Math.random()*5);
 	bandit_cnt_c= Math.floor(Math.random()*5);
+
+	banditsNumderAlert = (bandit_numb+10)/10;
+	banditsNumderAlert = parseInt(banditsNumderAlert);
 }
 
 
@@ -2641,23 +2720,23 @@ function battle_cnt(){
 
 function battle_alert(){
 	baner.className="ok";
-	enter_text.innerHTML="Напад бандитів, прийняти бій чи заплатити 600$ і здатись?";
-	glass.className="none";
+	enter_text.innerHTML=banditsNumderAlert+" Bandits on you way, you can take the battle <br/>or<br/> pay 600$ <br/>and continue you jorney?";
+	
 
 	clearInterval(move_scr)
 				ok.onclick=function(){
-					//
-					pers.className="none";
+					//	
 
+					battleStatus = true;
+					pers.className="none";
 					  battlefields()
 					glass.className="none";
 					baner.className="none";
-
 					battle_a()
 					
 				}
 				no.onclick=function(){
-					
+					//glass.className="none";
 					if(money_default>=600){
 		money_default=money_default-600;
 	money_cash=money_default;
@@ -2671,6 +2750,7 @@ function battle_alert(){
 	}else{
 		enter_text.innerHTML="у вас недостатньо коштів ";
 		pers.className="none";
+		battleStatus = true;
 					battlefields()
 					glass.className="none";
 					baner.className="none";
@@ -2727,6 +2807,17 @@ function battle_a(){
 			hero_b_mer.className="hero_b_image";
 			sign_h_b.className="sign";
 					}
+
+		if(hero_a_pos==false){
+		//time_hero_a
+		
+		hero_a_mer.className="none";
+	}
+		if(hero_b_pos==false){
+		//time_hero_a
+		
+		hero_b_mer.className="none";
+	}
 	bandit_check = 0;
 	bandits_healt_tipe()	
 	bandits_number()	
@@ -2895,6 +2986,7 @@ var bandit_check = false;
 
 bandit_first.onclick=function(){							////______________________attack on bandit 1
 	if(bandit_a_health_transfer>0){
+
 		bandit_check = 1;
 			health_cnt()
 			 if(hero_a_pos==true){
@@ -2909,7 +3001,7 @@ bandit_first.onclick=function(){							////______________________attack on bandi
 			 hit_trasfer = hit_a;
 				}
 
-				
+	glass.className="glass";		
 	bandit_a_health_transfer=bandit_a_health_transfer-hit_trasfer;
 		
 	bullet_fly_a()
@@ -2965,7 +3057,7 @@ bandit_second.onclick=function(){								///_________________attack on bandit 2
 			 hero.className="hero_image_shooting";
 			  hit_trasfer = hit_a;
 				}
-
+				glass.className="glass";
 bandit_b_health_transfer=bandit_b_health_transfer-hit_trasfer;
 	bullet_fly_b()	
 	/* if((hero_a_pos==true)||(hero_b_pos==true)){
@@ -3013,6 +3105,7 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
 			 hero.className="hero_image_shooting";
 			 	hit_trasfer = hit_a;
 				}
+					glass.className="glass";
 			bandit_c_health_transfer=bandit_c_health_transfer-hit_trasfer;
 			bullet_fly_c()
 		/*	if((hero_a_pos==true)||(hero_b_pos==true)){
@@ -3028,10 +3121,10 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
 			bandit_c = false;
 			//alert("win_C");
 		//	finish_battle()
-				if(bandit_a == true){
+				if(bandit_a === true){
 					bandit_shooting=1;
 					attack()
-				}else if(bandit_b == true){
+				}else if(bandit_b === true){
 						bandit_shooting=2;
 					attack()
 					//	finish_battle()
@@ -3081,13 +3174,14 @@ cnt_interval =	setInterval(function(){
 	health_sign_hero.style="width:"+hero_health+"px";
 					shootings_end()
 		if(hero_health>=1){
-			glass.className="none";
+			//glass.className="none";
 			hit_count=hit_count+1;
 			calcul=0;
 			bandit_shooting=0;
 			clearInterval(cnt_interval)
 		}else{
 			hero.className="hero_image_down";
+
 			health_sign_hero.className="none";
 			battle_win_alert()
 			bandit_shooting=0;
@@ -3095,7 +3189,7 @@ cnt_interval =	setInterval(function(){
 		}}, 10);
 	}
 function battle_win_alert(){
-	enter_text.innerHTML = "ви переможені";
+	enter_text.innerHTML = "You are lose this battle";
 	baner.className = "ask_ok";
 	glass.className = "glass";
 			no.className = "none";
@@ -3104,6 +3198,7 @@ function battle_win_alert(){
 baner.className="none";
 glass.className="none";
 calcul=0;
+				battleStatus = false;
 					ok.className="btn_m";
 					no.className="btn_m";
 					battlefield.className="none";
@@ -3153,6 +3248,7 @@ function shootings_end(){
 
 function battle_win(){
 	if(bandit_numb==0){
+		battleStatus = false;
 		finish_win()
 				
 			}
@@ -3160,7 +3256,7 @@ function battle_win(){
 
 function finish_win(){
 baner.className="ask_ok";
-	enter_text.innerHTML="Ви перемогли в бою";
+	enter_text.innerHTML="You are win in this battle";
 	glass.className="glass";
 	no.className="none";
 
@@ -3383,9 +3479,7 @@ bullet = setInterval(function()
 			hero.className="hero_image";
 			finish_battle()
 			bullets.className = "none";
-		clearInterval(bullet)
-
-		
+		clearInterval(bullet)	
 
 	}else{ 
 		bandit_b_health_transfer=bandit_b_health_transfer-hit_trasfer;
@@ -3456,8 +3550,11 @@ bullet = setInterval(function(){
 		
 		bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
 		bandit_c = false;
+		
+		 bullets.className = "none";
 		hero.className="hero_image";
 		clearInterval(bullet)
+		health_sign_с.className="none";
 		 bullets.className = "none";
 	}else{ 
 		health_sign_c.style="width:"+bandit_c_health_transfer+"px";
@@ -3563,6 +3660,7 @@ bullet = setInterval(function()
 	}else if(hero_a_health_mer<=2){		
 		//hero.className="hero_image_down ";
 		hero_a_mer.className="hero_a_image_down ";
+		glass.className="none";
 		hero_a_health_mer=0;
 		sign_h_a.className = "none";
 		//hero.className="hero_image";
@@ -3574,8 +3672,8 @@ bullet = setInterval(function()
 
 hero_a_health_mer=hero_a_health_mer-bandit_hit_a;
 		health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
-		
-		hero_a_mer	.className="hero_a_image";
+		glass.className="none";
+		hero_a_mer.className="hero_a_image";
 		 bullets.className = "none";
 		 clearInterval(bullet)
 		}
@@ -3592,6 +3690,7 @@ bullet = setInterval(function()
 	}else if(hero_b_health_mer<=2){		
 		//hero.className="hero_image_down ";
 		hero_b_mer.className="hero_b_image_down ";
+		glass.className="none";
 		hero_b_health_mer=0;
 		sign_h_b.className = "none";
 		//hero.className="hero_image";
@@ -3603,7 +3702,7 @@ bullet = setInterval(function()
 
 hero_b_health_mer=hero_b_health_mer-bandit_hit_a;
 		health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
-		
+		glass.className="none";
 		hero_b_mer.className="hero_b_image";
 		bullets.className = "none";
 		clearInterval(bullet)
@@ -3618,7 +3717,7 @@ hero_b_health_mer=hero_b_health_mer-bandit_hit_a;
 	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
 	}else if(hero_a_health<1){		
 		hero.className="hero_image_down ";
-		
+		glass.className="none";
 		//hero.className="hero_image";
 		
 		bullets.className = "none";
@@ -3627,7 +3726,7 @@ hero_b_health_mer=hero_b_health_mer-bandit_hit_a;
 
 hero_health=hero_health-bandit_hit_a;
 		health_sign_hero.style="width:"+hero_health+"px";
-		
+		glass.className="none";
 		hero.className="hero_image";
 		 bullets.className = "none";
 		clearInterval(bullet)
@@ -3654,6 +3753,7 @@ bullets.className = "bullet"
 				//hero.className="hero_image_down ";
 				hero_a_mer.className="hero_a_image_down ";
 				hero_a_health_mer=0;
+				glass.className="none";
 				//hero.className="hero_image";
 				hero_a_pos=false;
 				sign_h_a.className="none";
@@ -3664,8 +3764,8 @@ bullets.className = "bullet"
 
 				hero_a_health_mer=hero_a_health_mer-bandit_hit_b;
 				health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
-				
-				hero_a_mer	.className="hero_a_image";
+				glass.className="none";
+				hero_a_mer.className="hero_a_image";
 				bullets.className = "none";
 				clearInterval(bullet)
 			}
@@ -3683,6 +3783,7 @@ bullets.className = "bullet"
 				hero_b_mer.className="hero_b_image_down ";
 				hero_b_health_mer=0;
 				sign_h_b.className = "none";
+				glass.className="none";
 				//hero.className="hero_image";
 				hero_b_pos=false;
 				
@@ -3692,7 +3793,7 @@ bullets.className = "bullet"
 
 				hero_b_health_mer=hero_b_health_mer-bandit_hit_b;
 				health_sign_b_hero.style="width:"+hero_b_health_mer*hero_b_pers_tr+"px";
-				
+				glass.className="none";
 				hero_b_mer	.className="hero_b_image";
 				bullets.className = "none";
 				clearInterval(bullet)
@@ -3707,6 +3808,7 @@ bullets.className = "bullet"
 				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
 			}else if(hero_health<1){		
 				hero.className="hero_image_down";
+				glass.className="none";
 				//hero.className="hero_image";
 				
 				bullets.className = "none";
@@ -3716,7 +3818,7 @@ bullets.className = "bullet"
 				hero_health=hero_health-bandit_hit_b;
 		
 				health_sign_hero.style="width:"+hero_health+"px";
-				
+				glass.className="none";
 				hero.className="hero_image";
 				bullets.className = "none";
 				clearInterval(bullet)
@@ -3742,6 +3844,7 @@ bullet = setInterval(function()
 			//hero.className="hero_image_down ";
 			hero_a_mer.className="hero_a_image_down ";
 			hero_a_health_mer=0;
+			glass.className="none";
 			//hero.className="hero_image";
 			hero_a_pos=false;
 			sign_h_a.className="none";
@@ -3752,8 +3855,8 @@ bullet = setInterval(function()
 
 			hero_a_health_mer = hero_a_health_mer - bandit_hit_c;
 			health_sign_a_hero.style="width:"+hero_a_health_mer*hero_a_pers_tr+"px";
-		
-			hero_a_mer	.className="hero_a_image";
+		glass.className="none";
+			hero_a_mer.className="hero_a_image";
 			bullets.className = "none";
 			clearInterval(bullet)
 		}
@@ -3772,6 +3875,7 @@ bullet = setInterval(function()
 			hero_b_mer.className="hero_b_image_down ";
 			hero_b_health_mer=0;
 			sign_h_b.className = "none";
+			glass.className="none";
 			//hero.className="hero_image";
 			hero_b_pos=false;
 			
@@ -3781,7 +3885,7 @@ bullet = setInterval(function()
 
 	hero_b_health_mer = hero_b_health_mer-bandit_hit_c;
 		health_sign_b_hero.style="width:"+ hero_b_health_mer*hero_b_pers_tr+"px";
-		
+		glass.className="none";
 		hero_b_mer.className="hero_b_image";
 		 bullets.className = "none";
 		clearInterval(bullet)
@@ -3798,6 +3902,7 @@ bullet = setInterval(function()
 			bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
 	}else if(hero_health<=1){		
 			hero.className="hero_image_down ";
+			glass.className="none";
 			//hero.className="hero_image";
 			
 			bullets.className = "none";
@@ -3805,7 +3910,7 @@ bullet = setInterval(function()
 	}else{
 			hero_health=hero_health-bandit_hit_c;
 					health_sign_hero.style="width:"+hero_health+"px";
-			
+			glass.className="none";
 			hero.className="hero_image";
 			bullets.className = "none";
 			clearInterval(bullet)
@@ -3833,11 +3938,11 @@ bullet = setInterval(function()
 			bandit_a_health_transfer=50;
 			bandit_b_health_transfer=50;
 			bandit_c_health_transfer=50;
-			
+			traveler_check=true;
 			health_sign_a.className="health_sign_a";
 			health_sign_b.className="health_sign_b";
 			health_sign_c.className="health_sign_c";
-
+			glass.className="none";
 			health_sign_a.style="width:"+bandit_a_health_transfer+"px";
 			health_sign_b.style="width:"+bandit_b_health_transfer+"px";
 			health_sign_c.style="width:"+bandit_c_health_transfer+"px";
@@ -3877,7 +3982,9 @@ rez1 = [];
  package_twn_transfer=0;
  package_price=0;
  package_price_transfer=0;
+ 
 
+battleStatus = false;
 hero_a_pos=false;
 hero_b_pos=false;
 hero_a_health_mer = 50;
@@ -4011,3 +4118,18 @@ function merc_a_rend(){
 }
 
 /*________________mercenary end______________*/
+function merciner_time(){
+	if((m>=time_hero_a)&&(hero_a_pos==true)&&(dy>=time_hero_a_days)){
+		//time_hero_a
+		hero_a_pos=false;
+		hero_a_mer.className="none";
+		alert("Shooter A contract is over");
+	}
+
+	if((m>=time_hero_b)&&(hero_b_pos==true)&&(dy>=time_hero_b_days)){
+		hero_b_pos=false;
+		ero_b_mer.className="none";
+		alert("Shooter B contract is over");
+	}
+	//time_hero_a=mrc_time_rand;
+}

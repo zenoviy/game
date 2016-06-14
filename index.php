@@ -20,6 +20,7 @@
 	   </div>
 		<div id="money"></div>
 		<div id="date"></div>
+		<div id="health_title" class="none">Hero Health</div>
 		<div id="health_wrap" class="none">
 		<div id="health"></div></div>
 	</div>
@@ -130,7 +131,7 @@
 			<div id="slt_vg" class="inv">
 					<div id="slt_vg_inn" class="wag_img"></div>
 				</div>
-				<div class="invent"><p>зброя &nbsp; &nbsp; &nbsp; слоти</p></div>	
+				<div class="invent"><p>GUNS &nbsp; &nbsp; SLOT</p></div>	
 		</div>
 	</div>
 
@@ -145,7 +146,7 @@
 	<span>В містах можна відвідувати різні заклади, в закладах можна буде купляти і продавати різноманітні товари, в 'стайні' можна придбати додаткові місця в інвентарі</span>
 	<span>поки що не відрегульовані скрипти продажі і скрипти рандомізатора, також будуть скрипти з рандомним нападом бандитів на головного персонажа під час переміщень між містами.</span>
 	<br>
-	v.0.3.4
+	v.0.3.6
 </p>
 <button id="btn_ok_str" class="str_btn">Ok</button></div>
 <!--shop list-->
