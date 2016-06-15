@@ -2,7 +2,7 @@ var a=5;
 var b=0;
 var c=0;
 var inv = 0;
-var money_default=50;
+var money_default=50000;
 var money_cash= money_default;
 var dy=1;
 
@@ -11,7 +11,7 @@ var travel_rand_numb = 1;
 
 var traveler_check=true;
 var battleStatus = false;
-
+var event = 0;
 
 var ya=1002;
 var xa=111;
@@ -269,7 +269,7 @@ function shop_random(){					//reno--1
 		dynamite_min =90;
 		meet_min =35;
 		rope_min =120;
-		pickaxe_min =50;
+		pickaxe_min =20;
 		hearings_count()
 		rand_price_by()
 
@@ -314,10 +314,10 @@ function shop_random(){					//reno--1
 		chek=a;
 		whisky_min = 20;
 		ammo_min =35;
-		brad_min =50;
+		brad_min =70;
 		gold_min =178;
 		dynamite_min =85;
-		meet_min =35;
+		meet_min =55;
 		rope_min =50;
 		pickaxe_min =65;
 		hearings_count()
@@ -325,11 +325,11 @@ function shop_random(){					//reno--1
 				}else if(a==6){					//westwood--6
 					chek=a;
 		whisky_min = 25;
-		ammo_min =85;
+		ammo_min =105;
 		brad_min =35;
 		gold_min =60;
 		dynamite_min =95;
-		meet_min =50;
+		meet_min =80;
 		rope_min =55;
 		pickaxe_min =75;
 		hearings_count()
@@ -338,10 +338,10 @@ function shop_random(){					//reno--1
 		chek=a;
 		whisky_min = 95;
 		ammo_min =35;
-		brad_min =45;
+		brad_min =95;
 		gold_min =155;
-		dynamite_min =85;
-		meet_min =40;
+		dynamite_min =25;
+		meet_min =80;
 		rope_min =65;
 		pickaxe_min =20;
 		hearings_count()
@@ -349,12 +349,12 @@ function shop_random(){					//reno--1
 				}else if(a==8){					//bridgeport--8
 					chek=a;
 		whisky_min = 90;
-		ammo_min =45;
+		ammo_min =65;
 		brad_min =35;
 		gold_min =165;
 		dynamite_min =60;
-		meet_min =63;
-		rope_min =85;
+		meet_min =53;
+		rope_min =95;
 		pickaxe_min =25;
 		hearings_count()
 						rand_price_by()
@@ -795,7 +795,7 @@ function hearings_count(){
 	//if((hearings_city<=8) && (hearings_type<=3)){
 //if(hear_city_transfer!=a){
 	hearing_status=true;
-		if(a==hear_city_transfer){
+		if(a==event){
 
 			 whisky_min = 10;
 			 ammo_min =20;
@@ -809,16 +809,11 @@ function hearings_count(){
 		}else {
 					if ((hear_type_transfer<=3)||(hear_type_transfer>=7)){
 					//hearing_status=true;
+					hearing_status=true;
 					hear_city_transfer = hearings_city;
 					hear_type_transfer = hearings_type;
 						}
-
 			}
-	//}
-	//}else if(hear_type_transfer==3)
-    //    {
-	//alert("тут активні банди");
-	//	}
 }
 
  function sln_a(){
@@ -847,8 +842,9 @@ if(hearing_status==true){
 													enter_text_ask.innerHTML="поки що немає новин";
 													btn_no_ask.className="none";
 												}
-}else if(hearing_status==false){
+}else if(hearing_status===false){
 
+	hearings_count()
 enter_text_ask.innerHTML="фестиваль проводиться тут";
 	  btn_no_ask.className="none";
 
@@ -1372,11 +1368,15 @@ var jail_random = 0;                                                  	////// JA
 var jail_city_random = 0;
 var jail_city_random_trans = 0;
 var jail_chek = false;	
+var jail_bandit_transfer = 0;
 var revard = 0;
 var revard_transfer = 0;
+var bandit_face = ["winted_face", "winted_face_b", "winted_face_c", "winted_face_d", "winted_face_e"];
+var bandit_face_transfer = 0;
+var bandit_face_transfer_a = 0;
 
 function jail_rand(){
-jail_random	= Math.floor(Math.random() * 2 + 1);
+jail_random	= Math.floor(Math.random() * 5 + 1);
 jail_city_random	= Math.floor(Math.random() * 8 + 1);
 revard	= Math.floor(Math.random() * 5000 + 1);
 }
@@ -1384,26 +1384,76 @@ revard	= Math.floor(Math.random() * 5000 + 1);
 function wanted_poster(){
 	if(jail_chek == false){
 		if(jail_random == 1){
-			wanted_face.className = "winted_face";
-				jail_city_random_trans = jail_city_random;
+				bandit_face_transfer = 1;
+				wanted_face.className = bandit_face[bandit_face_transfer-1];
+				
 				revard_transfer = revard;
 		}else if(jail_random == 2){
-			wanted_face.className = "winted_face_b";
-				jail_city_random_trans = jail_city_random;
+				bandit_face_transfer = 2;
+				wanted_face.className = bandit_face[bandit_face_transfer-1];
+				
+				revard_transfer = revard;
+		}else if(jail_random == 3){
+				bandit_face_transfer = 3;
+				wanted_face.className = bandit_face[bandit_face_transfer-1];
+				
+				revard_transfer = revard;
+		}else if(jail_random == 4){
+				bandit_face_transfer = 4;
+				wanted_face.className = bandit_face[bandit_face_transfer-1];
+				
+				revard_transfer = revard;
+		}else if(jail_random == 5){
+				bandit_face_transfer = 5;
+				wanted_face.className = bandit_face[bandit_face_transfer-1];
+				
 				revard_transfer = revard;
 		}
+	}else{
+		bandit_face_transfer = bandit_face_transfer_a;
+		jail_city_random = jail_city_random_trans;
+		wanted_face.className = bandit_face[bandit_face_transfer-1];
+		face_stamp.className="winted_stamp"
 	}
 }
 	
 
 function prison_wanted(){
-	if(jail_chek == false){
-
-	alert("bandit");
-	jail_chek = true;
-	wanted_face.innerHTML="You already take a jobe";
-	}
+	ask_bnr.className="ask_ok";
+	glass.className="glass";
+	btn_no_ask.innerHTML="No";
+	btn_yes_ask.className="btn_m_ask";
+	btn_no_ask.className="btn_m_ask";
+					//btn_yes_ask.className="none";
+						//btn_no_ask.innerHTML="Yes";
+	glass.className="glass";
+	enter_text_ask.innerHTML=" Wanted bandit near "+city_name_list[jail_city_random-1]+" county";
+					//btn_yes_ask.className="btn_m_ask";
+		//traveler()
+		
+	//glass.className="glass";
+			btn_yes_ask.onclick = function(){
+			if(jail_chek === false){
+				jail_chek = true;
+				bandit_face_transfer_a = bandit_face_transfer; 
+				jail_city_random_trans = jail_city_random;
+				face_stamp.className="winted_stamp"
+				ask_bnr.className="none";
+				glass.className="none";
+				
+				}else{
+					ask_bnr.className="none";
+				glass.className="none";
+				}
+			}
+			btn_no_ask.onclick = function(){
+					ask_bnr.className="none";
+					glass.className="none";
+					//jail_chek = true;
+				}/**/
+	
 }
+
 
 
 var city_name_list =["Reno","Virginia City", "Carson City", "Redwood", "Silver Springs", "Westwood", "Doyle", "Bridgeport" ];
@@ -1462,6 +1512,7 @@ window.onload=function(){
 	var bullets = document.getElementById("bullets")
 
 	var wanted_face = document.getElementById("wanted_face")
+	var face_stamp = document.getElementById("face_stamp")
 
 	var wrn =document.getElementById("wrn")
 	var contracts = document.getElementById("active_contracts")
@@ -1577,7 +1628,7 @@ test_btn.onclick=function(){
 	//alert(bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|"+bandit_cnt_a+"<bandit_cnt_a|"+bandit_cnt_b+"<bandit_cnt_b|"+bandit_cnt_a+"<bandit_cnt_c|"+bandit_shooting+"<bandit_shooting|"+bandit_hit_a+"<bandit_hit_a|"+bandit_hit_b+"<bandit_hit_b|"+bandit_hit_c+"<bandit_hit_c|"+bandit_shooting+"<bandit_shooting|");
 	//alert( hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+hero_b_heals+"<hero_b_heals|"+hero_a_hit+"<hero_a_hit|"+hero_b_hit+"<hero_b_hit|");
 	//alert( hit_a+''+hit_b+''+hit_c+"<hit_a,b,c|"+hit+"<hit|"+hls_mrc+"<hls_mrc|"+hero_a_health_mer+"<hero_a_health_mer|"+ hero_a_health_trans+"<hero_a_health_trans|"+ merccnt+"<merccnt|"+time_hero_a+"<time_hero_a|"+hero_b_pos+"<hero_b_pos|"+hero_a_pos+"<hero_a_pos|"+hero_a_health+"<hero_a_health|"+bandit_a_health+"<bandit_a_health|"+bandit_b_health+"<bandit_b_health|"+bandit_c_health+"<bandit_c_health|");
-	alert(battle+"<battle|"+bullets_x+"<bullets_x|"+bullets_y+"<bullets_y|"+jail_random+"<jail_random|"+time_hero_a_days+"<time_hero_a_days|"+dy+"<dy|"+time_hero_a+"<time_hero_a|");
+	alert(bandit_face_transfer+"<bandit_face_transfer|"+bandit_face_transfer_a+"<bandit_face_transfer_a|"+jail_chek+"<jail_chek|"+battle+"<battle|"+bullets_x+"<bullets_x|"+bullets_y+"<bullets_y|"+jail_random+"<jail_random|"+time_hero_a_days+"<time_hero_a_days|"+dy+"<dy|"+time_hero_a+"<time_hero_a|");
 }
 
 contracts.onclick = function(){
@@ -1788,7 +1839,7 @@ function tbl(){
 			li_cont.className="li_content";
 			no_sh.className="none";
 			 li_cont.innerHTML="&nbsp; <br>"
-			 +"<div class='sp_wr_prison'>"+ "<div onclick='prison_wanted()' class='wanted_take'><div id='wanted_face' class='none'></div></div></div><br>";
+			 +"<div class='sp_wr_prison'>"+ "<div onclick='prison_wanted()' class='wanted_take'><div id='wanted_face' class='none'><div id='face_stamp' class='none'></div></div></div><br>";
 				//	+"<div class='sp_wr'>переправка"+ "<button onclick='' class='plus'>+</button><button onclick='' class='plus'>-</button></div><br>";
 			wanted_poster()		
 
@@ -1930,6 +1981,12 @@ function cityname(){
 			city_name.innerHTML = "Bridgeport";
 		}
 }
+
+function hear_checA(){
+	if(hearing_status==true){
+		event = hearings_city;
+	}
+}
 //---------------Reno-------------// 1
 
 reno.onclick = function(){
@@ -1947,7 +2004,7 @@ reno.onclick = function(){
 		glass.className="glass";
 				 ct_x=344;
 				 ct_y=137;
-				
+				hear_checA()
 				 spid_x=1; //1.75
 				 spid_y=1;	//0.5
 				move()
@@ -1979,7 +2036,7 @@ virginia.onclick = function(){
 			
 				 ct_x=230;
 				 ct_y=395;
-				
+				hear_checA()
 				 spid_x=1; //0.7
 				 spid_y=1;  //0.5
 				// glass.className="glass";
@@ -2011,7 +2068,7 @@ battle_random_time()
 		 glass.className="glass";
 			ct_x=252;
 				 ct_y=648;
-				 
+				 hear_checA()
 				 spid_x=1;	//0.45
 				 spid_y=1;		//1
 				move()
@@ -2043,7 +2100,7 @@ redwood.onclick = function(){
 		glass.className="glass";	 
 			ct_x=422;
 				 ct_y=430;
-				 
+				hear_checA() 
 				 spid_x=1;	//1.8
 				 spid_y=1;	//0.5
 				move()
@@ -2074,7 +2131,7 @@ battle_count=0;
 		glass.className="glass";	 
 			ct_x=151;
 				 ct_y=918;
-				 
+				hear_checA() 
 				 spid_x=1;	//1.8
 				 spid_y=1;	//0.5
 				move()
@@ -2105,7 +2162,7 @@ battle_random_time()
 		glass.className="glass";	 
 			ct_x=102;
 				 ct_y=208;
-				 
+				hear_checA() 
 				 spid_x=1;	//1.8
 				 spid_y=1;	//0.5
 				move()
@@ -2132,6 +2189,7 @@ battle_random_time()
 		glass.className="glass";	 
 			ct_x=73;
 				 ct_y=650;
+				hear_checA()
 				 spid_x=1;	//1.8
 				 spid_y=1;	//0.5
 				move()
@@ -2156,7 +2214,7 @@ battle_random_time()
 		glass.className="glass";	 
 			ct_x=377;
 				 ct_y=820;
-				 
+				hear_checA() 
 				 spid_x=1;	//1.9	
 				 spid_y=1;	//0.5
 				move()
@@ -2230,7 +2288,7 @@ function days(){
 for(k=0; k<=day_count.length-1; k++){
 	if(k==m-1){
 		day_cnt = day_count[k];
-			if(m==13){
+			if(m=13){
 
 				if(money_default<100000){
 					win_lose.className="lose";
@@ -3112,7 +3170,8 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
  	bullet_fly_sec_c()
  }	*/
 
-	if(bandit_c_health_transfer>0){
+	if(bandit_c_health_transfer>1){
+
 		bandit_shooting=3;
 		attack()
 		}else{
@@ -3121,10 +3180,10 @@ bandit_third.onclick=function(){								///______________attack on bandit 3
 			bandit_c = false;
 			//alert("win_C");
 		//	finish_battle()
-				if(bandit_a === true){
+				if(bandit_a == true){
 					bandit_shooting=1;
 					attack()
-				}else if(bandit_b === true){
+				}else if(bandit_b == true){
 						bandit_shooting=2;
 					attack()
 					//	finish_battle()
@@ -3484,7 +3543,7 @@ bullet = setInterval(function()
 	}else{ 
 		bandit_b_health_transfer=bandit_b_health_transfer-hit_trasfer;
 		health_sign_b.style="width:"+bandit_b_health_transfer+"px";
-		if(bandit_b_health_transfer<=1){
+		if(bandit_b_health_transfer<1){
 	
 			bandit_second.className=style_bandits_down[bandit_cnt_b]+" bandit_b_image_down";
 			bandit_b = false;
@@ -3545,17 +3604,15 @@ bullet = setInterval(function(){
 				bullets_x = bullets_x + 0.5;
 				bullets_y = bullets_y - 10;
 				bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(bandit_c_health_transfer<=1){
-		finish_battle()
+		}else if(bandit_c_health_transfer<=1){
 		
-		bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
-		bandit_c = false;
-		
-		 bullets.className = "none";
-		hero.className="hero_image";
-		clearInterval(bullet)
-		health_sign_с.className="none";
-		 bullets.className = "none";
+				bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
+				bandit_c = false;
+				hero.className="hero_image";
+				bullets.className = "none";
+				finish_battle()
+	
+			 	clearInterval(bullet)
 	}else{ 
 		health_sign_c.style="width:"+bandit_c_health_transfer+"px";
 		
@@ -3584,7 +3641,7 @@ bullet = setInterval(function()
 	bullets_x = bullets_x + 0.5;
 	bullets_y = bullets_y - 10;
 	bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
-	}else if(bandit_c_health_transfer<=1){
+	}else if(bandit_c_health_transfer<1){
 		finish_battle()	
 		
 			bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
@@ -3597,7 +3654,7 @@ bullet = setInterval(function()
 	}else{ 
 		bandit_c_health_transfer=bandit_c_health_transfer-hit_trasfer;
 		health_sign_c.style="width:"+bandit_c_health_transfer+"px";
-		if(bandit_c_health_transfer<=1){
+		if(bandit_c_health_transfer<1){
 	
 		bandit_third.className=style_bandits_down[bandit_cnt_c]+" bandit_c_image_down";
 		bandit_c = false;
@@ -3616,6 +3673,7 @@ bullet = setInterval(function()
 					//	finish_battle()
 				}else{
 			//bandit_third.className="bandit_type_a_down bandit_c_image_down";
+
 			bandit_numb = bandit_numb-1;
 				battle_win()
 			}/*
@@ -3866,7 +3924,7 @@ bullet = setInterval(function()
 	bullets_x = 355;
 	bullets_y = 160;
 bullet = setInterval(function()
-{	if((bullets_x<=380)&&(bullets_y<=828)){
+{	if((bullets_x<=370)&&(bullets_y<=828)){
 			bullets_x = bullets_x + 0;
 			bullets_y = bullets_y + 10;	
 			bullets.style = "margin-top:"+bullets_x+"px; margin-left:"+bullets_y+"px;";
@@ -3893,8 +3951,8 @@ bullet = setInterval(function()
 	}, 10);
 
 }else{
-	bullets_x = 355;
-	bullets_y = 160;
+	/*bullets_x = 355;
+	bullets_y = 160;*/
   	bullet = setInterval(function()
 {	if((bullets_x>=320)&&(bullets_y<=880)){
 			bullets_x = bullets_x - 0.5;
@@ -3956,7 +4014,7 @@ bullet = setInterval(function()
 			sign_b.className="sign";
 			sign_c.className="sign";
 	
-rez1 = [];
+ rez1 = [];
  rez2 = [];
  rez3 = [];
  rez4 = [];
@@ -3982,7 +4040,7 @@ rez1 = [];
  package_twn_transfer=0;
  package_price=0;
  package_price_transfer=0;
- 
+
 
 battleStatus = false;
 hero_a_pos=false;
@@ -4010,7 +4068,37 @@ i=0;
  bandit_a_health_transfer = 50;
  bandit_b_health_transfer= 50;
  bandit_c_health_transfer = 50;
-
+event = 0;
+if(time_dy >= 270){
+					time_dy=0;
+					dy=dy+3;
+					if(hear_city_transfer!=a){
+					hearings_random()
+				}else {
+					if ((hear_type_transfer<=3)||(hear_type_transfer>=7)){
+					//hearing_status=true;
+					hear_city_transfer = hearings_city;
+					hear_type_transfer = hearings_type;
+						}
+			}
+				merc_a_rend()
+				marciner_city()
+				jail_rand()
+					packege_random()
+					merciner_time()
+					traveler_random()
+						clear_list()
+						shop_random()
+					date.innerHTML=dy+"/"+m+"/"+year;
+					if(dy>=day_cnt){
+						
+					    m=m+1;
+					    dy=1;
+					    
+						days()
+						
+						date.innerHTML=dy+"/"+m+"/"+year;
+					}}
  hit = 0;
  packege_random()
 		trav_eres()

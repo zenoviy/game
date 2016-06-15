@@ -1289,7 +1289,7 @@ width: 161px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     float: left;
     height: 50px;
-    margin: 6px;
+    margin: 3px;
     width: 50px;
     border-radius:5px;
 }
@@ -1503,6 +1503,42 @@ width: 161px;
     background-repeat: no-repeat;
     position: absolute;
     margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.winted_face_c{
+    background-image: url(../img/wanted_band_c.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.winted_face_d{
+    background-image: url(../img/wanted_band_d.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.winted_face_e{
+    background-image: url(../img/wanted_band_e.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 120px 0px 0px 50px;
+    width: 163px;
+    height: 155px;
+}
+.winted_stamp{
+    background-image: url(../img/wanted_band_stamp.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 0;
     width: 163px;
     height: 155px;
 }
